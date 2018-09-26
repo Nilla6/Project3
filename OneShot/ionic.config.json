@@ -1,0 +1,7 @@
+{
+  "name": "OneShot",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
