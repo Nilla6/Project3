@@ -24,6 +24,6 @@ export class LoginPage {
   }
 
   GoToAnotherPage(): void {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 }
