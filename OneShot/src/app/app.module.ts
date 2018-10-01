@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
+import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     AboutPage,
-    CategoryPage
+    CategoryPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     AboutPage,
-    CategoryPage
+    CategoryPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,
