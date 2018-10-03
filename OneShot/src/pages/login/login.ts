@@ -17,7 +17,7 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
