@@ -25684,6 +25684,11 @@ ion-navbar.toolbar {
   color: #4017d3;
 }
 
+page-category {
+  background-color: black;
+  color: #4017d3;
+}
+
 page-home .card-background-page {
   background-color: black;
   color: #4017d3;
