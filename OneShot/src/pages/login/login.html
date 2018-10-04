@@ -13,6 +13,31 @@
 </ion-header>
 
 
-<ion-content padding>
-  <button ion-button block (click)='GoToAnotherPage()'>Continue as Guest</button>
+<ion-content padding class='main'>
+
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        
+        <button ion-button block (click)='Alert()'>Submit</button>
+      </ion-list>
+
+          <ion-row>
+            <ion-col style="text-align: right">
+              <button ion-button round outline (click)='GoToAnotherPage()'>Guests</button>
+            </ion-col>
+            <ion-col style="text-align: left">
+              <button ion-button round outline (click)='Alert()'>Sign Up</button>
+            </ion-col>
+          </ion-row>
+
+ 
 </ion-content>

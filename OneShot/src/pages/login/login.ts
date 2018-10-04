@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
@@ -17,11 +17,28 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  Alert() {
+    let confirm = this.alertCtrl.create({
+      title: 'Not Done Yet!',
+      message: 'This feature has not yet been completed. Will be completed soon.',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            console.log('Agree clicked');
+            this.navCtrl.setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present()
   }
 
   GoToAnotherPage(): void {

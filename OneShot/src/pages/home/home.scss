@@ -1,8 +1,8 @@
 page-home {
 
     .card-background-page {
-        background-color: black;
         color: rgb(64, 23, 211);
+        font-family: sans-serif;
 
         ion-card {
           position: relative;
@@ -31,5 +31,4 @@ page-home {
     ion-title{
         text-align: center;
     }
-
 }

@@ -25680,8 +25680,11 @@ ion-navbar.toolbar {
 
 .main {
   font-family: sans-serif;
-  background-color: black;
   color: #4017d3;
+}
+
+ion-title {
+  text-align: center;
 }
 
 page-about ion-title {
@@ -25720,8 +25723,8 @@ page-category ion-title {
 }
 
 page-home .card-background-page {
-  background-color: black;
   color: #4017d3;
+  font-family: sans-serif;
 }
 
 page-home .card-background-page ion-card {

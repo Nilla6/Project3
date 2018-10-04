@@ -34,9 +34,9 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\about\about.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>About</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<h1>About the Creators</h1>\n\n	<img src = "img.name" align = "center" width = "200" height = "300" alt = "Nik Coleman">\n\n	<h3>Nik Coleman</h3>\n\n		<p>Nik Coleman is a computer science major. He is planning to graduate in a year or two. For the project, he committed to creating the login and home page. He helped do the startup of the app.</p>\n\n	<img src = "img.name" align = "center" width = "200" height = "300" alt = "Kasey Powers">\n\n	<h3>Kasey Powers</h3>\n\n		<p>Kasey Powers is a graphic design major with a minor in digital media studies. She is planning to graduate at the end of the semester. In this app, Kasey has helped make the about and catagory page of the app. She also made the logo and app icon for the app.</p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\about\about.html"*/,
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\about\about.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>About</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<h1>About the Creators</h1>\n\n	<img src = "img.name" align = "center" width = "200" height = "300" alt = "Nik Coleman">\n\n	<h3>Nik Coleman</h3>\n\n		<p>Nik Coleman is a computer science major. He is planning to graduate in a year or two. For the project, he committed to creating the login and home page. He helped do the startup of the app.</p>\n\n	<img src = "img.name" align = "center" width = "200" height = "300" alt = "Kasey Powers">\n\n	<h3>Kasey Powers</h3>\n\n		<p>Kasey Powers is a graphic design major with a minor in digital media studies. She is planning to graduate at the end of the semester. In this app, Kasey has helped make the about and catagory page of the app. She also made the logo and app icon for the app.</p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\about\about.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], AboutPage);
     return AboutPage;
 }());
@@ -79,9 +79,9 @@ var CategoryPage = /** @class */ (function () {
     };
     CategoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-category',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\category\category.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Category</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n	<ion-list>\n\n	  <ion-list-header>\n\n	    Best Bars \n\n	  </ion-list-header>\n\n	  <ion-item>The Library</ion-item>\n\n	  <ion-item>Roosters Blues House</ion-item>\n\n	  <ion-item>Snackbar</ion-item>\n\n	  <ion-item>The Growler</ion-item>\n\n	  <ion-item>Proud Larry\'s</ion-item>\n\n	  <ion-item>The Levee</ion-item>\n\n	  <ion-item>Round Table</ion-item>\n\n	  <ion-item>Funky\'s Pizza & Daiquiri Bar</ion-item>\n\n	</ion-list>\n\n\n\n	<ion-list>\n\n	  <ion-list-header>\n\n	    Most Loved\n\n	  </ion-list-header>\n\n	  <ion-item>The Library</ion-item>\n\n	  <ion-item>Roosters Blues House</ion-item>\n\n	  <ion-item>The Levee</ion-item>\n\n	  <ion-item>Round Table</ion-item>\n\n	  <ion-item>El Mariachi Grill</ion-item>\n\n	  <ion-item>Kabuki</ion-item>\n\n	  <ion-item>Toyo Japanese Sushi Bar & Hibachi</ion-item>\n\n	  <ion-item>Chili\'s Grill & Bar</ion-item>\n\n	</ion-list>\n\n\n\n    <ion-list>\n\n	<ion-list-header>\n\n	    Fine Dining  \n\n	  </ion-list-header>\n\n	  <ion-item>El Agave</ion-item>\n\n	  <ion-item>Papitos Mexican Grill</ion-item>\n\n	  <ion-item>El Mariachi Grill</ion-item>\n\n	  <ion-item>El Milagro</ion-item>\n\n	  <ion-item>Pita Pit</ion-item>\n\n	  <ion-item>Buffalo Wild Wings</ion-item>\n\n	  <ion-item>Kabuki</ion-item>\n\n	  <ion-item>Toyo Japanese Sushi Bar & Hibachi</ion-item>\n\n	  <ion-item>Chili\'s Grill & Bar</ion-item>\n\n	</ion-list>\n\n\n\n	<ion-list>\n\n	<ion-list-header>\n\n	    Best Drinks Served \n\n	  </ion-list-header>\n\n	  <ion-item>Maragritas</ion-item>\n\n	  <ion-item>Sangrias</ion-item>\n\n	  <ion-item>Cocktails</ion-item>\n\n	  <ion-item>Wine</ion-item>\n\n	  <ion-item>Beer</ion-item>\n\n	  <ion-item>Whiskey</ion-item>\n\n	  <ion-item>Vodka</ion-item>\n\n	  <ion-item>Gin</ion-item>\n\n	  <ion-item>Tequilla</ion-item>\n\n	</ion-list>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\category\category.html"*/,
+            selector: 'page-category',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\category\category.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Category</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n	<ion-list>\n\n	  <ion-list-header>\n\n	    Best Bars \n\n	  </ion-list-header>\n\n	  <ion-item>The Library</ion-item>\n\n	  <ion-item>Roosters Blues House</ion-item>\n\n	  <ion-item>Snackbar</ion-item>\n\n	  <ion-item>The Growler</ion-item>\n\n	  <ion-item>Proud Larry\'s</ion-item>\n\n	  <ion-item>The Levee</ion-item>\n\n	  <ion-item>Round Table</ion-item>\n\n	  <ion-item>Funky\'s Pizza & Daiquiri Bar</ion-item>\n\n	</ion-list>\n\n\n\n	<ion-list>\n\n	  <ion-list-header>\n\n	    Most Loved\n\n	  </ion-list-header>\n\n	  <ion-item>The Library</ion-item>\n\n	  <ion-item>Roosters Blues House</ion-item>\n\n	  <ion-item>The Levee</ion-item>\n\n	  <ion-item>Round Table</ion-item>\n\n	  <ion-item>El Mariachi Grill</ion-item>\n\n	  <ion-item>Kabuki</ion-item>\n\n	  <ion-item>Toyo Japanese Sushi Bar & Hibachi</ion-item>\n\n	  <ion-item>Chili\'s Grill & Bar</ion-item>\n\n	</ion-list>\n\n\n\n    <ion-list>\n\n	<ion-list-header>\n\n	    Fine Dining  \n\n	  </ion-list-header>\n\n	  <ion-item>El Agave</ion-item>\n\n	  <ion-item>Papitos Mexican Grill</ion-item>\n\n	  <ion-item>El Mariachi Grill</ion-item>\n\n	  <ion-item>El Milagro</ion-item>\n\n	  <ion-item>Pita Pit</ion-item>\n\n	  <ion-item>Buffalo Wild Wings</ion-item>\n\n	  <ion-item>Kabuki</ion-item>\n\n	  <ion-item>Toyo Japanese Sushi Bar & Hibachi</ion-item>\n\n	  <ion-item>Chili\'s Grill & Bar</ion-item>\n\n	</ion-list>\n\n\n\n	<ion-list>\n\n	<ion-list-header>\n\n	    Best Drinks Served \n\n	  </ion-list-header>\n\n	  <ion-item>Maragritas</ion-item>\n\n	  <ion-item>Sangrias</ion-item>\n\n	  <ion-item>Cocktails</ion-item>\n\n	  <ion-item>Wine</ion-item>\n\n	  <ion-item>Beer</ion-item>\n\n	  <ion-item>Whiskey</ion-item>\n\n	  <ion-item>Vodka</ion-item>\n\n	  <ion-item>Gin</ion-item>\n\n	  <ion-item>Tequilla</ion-item>\n\n	</ion-list>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\category\category.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], CategoryPage);
     return CategoryPage;
 }());
@@ -124,9 +124,9 @@ var DetailsPage = /** @class */ (function () {
     };
     DetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-details',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/'<!--\n\n  Generated template for the DetailsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Details</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/,
+            selector: 'page-details',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\details\details.html"*/'<!--\n\n  Generated template for the DetailsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Details</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\details\details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], DetailsPage);
     return DetailsPage;
 }());
@@ -162,23 +162,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams) {
+    function LoginPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
     }
     LoginPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad LoginPage');
+    };
+    LoginPage.prototype.Alert = function () {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Not Done Yet!',
+            message: 'This feature has not yet been completed. Will be completed soon.',
+            buttons: [
+                {
+                    text: 'Ok',
+                    handler: function () {
+                        console.log('Agree clicked');
+                        _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+                    }
+                }
+            ]
+        });
+        confirm.present();
     };
     LoginPage.prototype.GoToAnotherPage = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <button ion-button block (click)=\'GoToAnotherPage()\'>Continue as Guest</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class=\'main\'>\n\n\n\n    <ion-list>\n\n\n\n        <ion-item>\n\n          <ion-label floating>Username</ion-label>\n\n          <ion-input type="text"></ion-input>\n\n        </ion-item>\n\n      \n\n        <ion-item>\n\n          <ion-label floating>Password</ion-label>\n\n          <ion-input type="password"></ion-input>\n\n        </ion-item>\n\n        \n\n        <button ion-button block (click)=\'Alert()\'>Submit</button>\n\n      </ion-list>\n\n\n\n          <ion-row>\n\n            <ion-col style="text-align: right">\n\n              <button ion-button round outline (click)=\'GoToAnotherPage()\'>Guests</button>\n\n            </ion-col>\n\n            <ion-col style="text-align: left">\n\n              <button ion-button round outline (click)=\'Alert()\'>Sign Up</button>\n\n            </ion-col>\n\n          </ion-row>\n\n\n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\login\login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -284,9 +303,9 @@ var ListPage = /** @class */ (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\list\list.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>List</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n\n      {{item.title}}\n\n      <div class="item-note" item-end>\n\n        {{item.note}}\n\n      </div>\n\n    </button>\n\n  </ion-list>\n\n  <div *ngIf="selectedItem" padding>\n\n    You navigated here from <b>{{selectedItem.title}}</b>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\list\list.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>List</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n\n      {{item.title}}\n\n      <div class="item-note" item-end>\n\n        {{item.note}}\n\n      </div>\n\n    </button>\n\n  </ion-list>\n\n  <div *ngIf="selectedItem" padding>\n\n    You navigated here from <b>{{selectedItem.title}}</b>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\list\list.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], ListPage);
     return ListPage;
     var ListPage_1;
@@ -361,7 +380,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/category/category.module#CategoryPageModule', name: 'CategoryPage', segment: 'category', priority: 'low', defaultHistory: [] },
@@ -370,7 +389,7 @@ var AppModule = /** @class */ (function () {
                     ]
                 }),
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
@@ -383,7 +402,7 @@ var AppModule = /** @class */ (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
             ]
         })
     ], AppModule);
@@ -460,13 +479,13 @@ var MyApp = /** @class */ (function () {
         this.nav.setRoot(page.component);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -499,9 +518,9 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="card-background-page">\n\n  <h3>Ionic Menu Starter</h3>\n\n\n\n  <p>\n\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n\n  </p>\n\n\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test.jpeg"/>\n\n    <div class="card-title">São Paulo</div>\n\n    <div class="card-subtitle">41 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test2.png"/>\n\n    <div class="card-title">Amsterdam</div>\n\n    <div class="card-subtitle">64 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test3.jpg"/>\n\n    <div class="card-title">San Francisco</div>\n\n    <div class="card-subtitle">72 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test4.jpg"/>\n\n    <div class="card-title">Madison</div>\n\n    <div class="card-subtitle">28 Listings</div>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="card-background-page">\n\n  <h3>Ionic Menu Starter</h3>\n\n\n\n  <p>\n\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n\n  </p>\n\n\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test.jpeg"/>\n\n    <div class="card-title">Best Bars</div>\n\n    <div class="card-subtitle">41 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test2.png"/>\n\n    <div class="card-title">Most Loved</div>\n\n    <div class="card-subtitle">64 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test3.jpg"/>\n\n    <div class="card-title">Fine Dining</div>\n\n    <div class="card-subtitle">72 Listings</div>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <img src="../../assets/imgs/test4.jpg"/>\n\n    <div class="card-title">Best Drinks Served</div>\n\n    <div class="card-subtitle">28 Listings</div>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\owner\Documents\CSCI 458\Project3\OneShot\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
