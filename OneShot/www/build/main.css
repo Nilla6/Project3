@@ -25684,9 +25684,39 @@ ion-navbar.toolbar {
   color: #4017d3;
 }
 
-page-category {
+page-about ion-title {
+  text-align: center;
+}
+
+page-about h1 {
+  text-align: center;
+}
+
+page-about h3 {
+  text-align: center;
+}
+
+page-about p {
+  text-align: center;
+}
+
+page-category .list-background-page {
   background-color: black;
   color: #4017d3;
+}
+
+page-category .list-background-page ion-list {
+  position: relative;
+  text-align: center;
+}
+
+page-category .list-background-page ion-item {
+  position: relative;
+  text-align: center;
+}
+
+page-category ion-title {
+  text-align: center;
 }
 
 page-home .card-background-page {
