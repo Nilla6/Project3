@@ -1,17 +1,17 @@
 page-category {
 
     .list-background-page { 
-    	background-color: black;
     	color: rgb(64, 23, 211);
+        font-family: sans-serif;
     
-    	ion-list {
-          position: relative;
-          text-align: center;
+    ion-list {
+        position: relative;
+        text-align: center;
         }
 
-    	ion-item {
-    	  position: relative;
-          text-align: center;
+    ion-item {
+    	position: relative;
+        text-align: center;
         }
     }
 

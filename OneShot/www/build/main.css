@@ -25703,9 +25703,18 @@ page-about p {
   text-align: center;
 }
 
+page-about img {
+  position: relative;
+}
+
+page-about .rotateimg90 {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 page-category .list-background-page {
-  background-color: black;
   color: #4017d3;
+  font-family: sans-serif;
 }
 
 page-category .list-background-page ion-list {
