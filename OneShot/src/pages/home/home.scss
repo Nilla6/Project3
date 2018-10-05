@@ -1,7 +1,11 @@
 page-home {
 
+    .whiteBackground {
+      background-color: rgb(255, 255, 255);
+    }
+
     .card-background-page {
-        color: rgb(64, 23, 211);
+        background-color: rgb(204, 204, 204);
         font-family: sans-serif;
 
         ion-card {
@@ -15,7 +19,7 @@ page-home {
           font-size: 2.0em;
           width: 100%;
           font-weight: bold;
-          color: rgb(64, 23, 211);
+          color: rgb(237, 32, 36);
         }
       
         .card-subtitle {
@@ -23,12 +27,13 @@ page-home {
           position: absolute;
           top: 52%;
           width: 100%;
-          color: rgb(64, 23, 211);
+          color: rgb(237, 32, 36);
         }
 
     }
 
     ion-title{
         text-align: center;
+        color: rgb(0, 0, 0);
     }
 }

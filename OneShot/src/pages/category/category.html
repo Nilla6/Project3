@@ -4,70 +4,116 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <div text-center>
+   		 <img src = "../../assets/imgs/OneShotLogo-white.jpg" width = "auto" height = "auto" alt = "OneShot">
+   	</div>
     <ion-title>Categories</ion-title>
   </ion-navbar>
-
+ 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class='mainStyle'>
 
-	<ion-list>
-	  <ion-list-header>
-	    Best Bars 
-	  </ion-list-header>
-	  <ion-item>The Library <ion-icon name="flame"><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-icon></ion-item>
-	  <ion-item>Roosters Blues House<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Snackbar<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>The Growler<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Proud Larry's<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>The Levee<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Round Table<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Funky's Pizza & Daiquiri Bar<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	</ion-list>
+	<div text-center>
+		<!--<ion-list>
+				<button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+						{{ item }}
+					</button>
+		</ion-list>-->
 
-	<ion-list>
-	  <ion-list-header>
-	    Most Loved
-	  </ion-list-header>
-	  <ion-item>The Library<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Roosters Blues House<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>The Levee<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Round Table<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>El Mariachi Grill<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Kabuki<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Toyo Japanese Sushi Bar & Hibachi<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Chili's Grill & Bar<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	</ion-list>
+		<ion-list>
+			<br>		
+		  <ion-list-header>
+		    Best Bars 
+		  </ion-list-header>
+		  <ion-item class= "item">The Library<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon>
+		  </ion-item>
 
-    <ion-list>
-	<ion-list-header>
-	    Fine Dining  
-	  </ion-list-header>
-	  <ion-item>El Agave<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Papitos Mexican Grill<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>El Mariachi Grill<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>El Milagro<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Pita Pit<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Buffalo Wild Wings<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Kabuki<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Toyo Japanese Sushi Bar & Hibachi<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Chili's Grill & Bar<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	</ion-list>
+		  <ion-item>Roosters Blues House<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
 
-	<ion-list>
-	<ion-list-header>
-	    Best Drinks Served 
-	  </ion-list-header>
-	  <ion-item>Maragritas<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Sangrias<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Cocktails<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Wine<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Beer<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Whiskey<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Vodka<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Gin<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	  <ion-item>Tequilla<ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon><ion-icon name="flame"></ion-icon></ion-item>
-	</ion-list>
+		  <ion-item>Snackbar<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>The Growler<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Proud Larry's<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>The Levee<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Round Table<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Funky's Pizza & Daiquiri Bar<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+		</ion-list>
+
+		<ion-list>
+			<br>
+		  <ion-list-header>
+		    Most Loved
+		  </ion-list-header>
+		  <ion-item>The Library<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Roosters Blues House<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>The Levee<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Round Table<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>El Mariachi Grill<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Kabuki<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Toyo Japanese Sushi Bar & Hibachi<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Chili's Grill & Bar<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+		</ion-list>
+
+	    <ion-list>
+				<br>
+		<ion-list-header>
+		    Fine Dining  
+		  </ion-list-header>
+		  <ion-item>El Agave<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Papitos Mexican Grill<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>El Mariachi Grill<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>El Milagro<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Pita Pit<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Buffalo Wild Wings<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Kabuki<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Toyo Japanese Sushi Bar & Hibachi<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Chili's Grill & Bar<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+		</ion-list>
+
+		<ion-list>
+			<br>
+		<ion-list-header>
+		    Best Drinks Served 
+		  </ion-list-header>
+		  <ion-item>Maragritas<ion-icon name="flame"item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Sangrias<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Cocktails<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Wine<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Beer<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Whiskey<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Vodka<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Gin<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+
+		  <ion-item>Tequilla<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
+		</ion-list>
+	</div>
 
 </ion-content>

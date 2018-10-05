@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
 /**
  * Generated class for the LoginPage page.
@@ -43,6 +42,5 @@ export class LoginPage {
 
   GoToAnotherPage(): void {
     this.navCtrl.setRoot(HomePage);  
-    
   }
 }

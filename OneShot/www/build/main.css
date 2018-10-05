@@ -25678,9 +25678,9 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-.main {
+.mainStyle {
+  background-color: #cccccc;
   font-family: sans-serif;
-  color: #4017d3;
 }
 
 ion-title {
@@ -25689,18 +25689,26 @@ ion-title {
 
 page-about ion-title {
   text-align: center;
+  color: black;
+}
+
+page-about .about-background-page {
+  background-color: #cccccc;
 }
 
 page-about h1 {
   text-align: center;
+  color: white;
 }
 
 page-about h3 {
   text-align: center;
+  color: white;
 }
 
 page-about p {
   text-align: center;
+  color: #ed2024;
 }
 
 page-about img {
@@ -25712,27 +25720,25 @@ page-about .rotateimg90 {
   transform: rotate(90deg);
 }
 
-page-category .list-background-page {
+page-category .ion-list-background-page {
   color: #4017d3;
   font-family: sans-serif;
-}
-
-page-category .list-background-page ion-list {
-  position: relative;
-  text-align: center;
-}
-
-page-category .list-background-page ion-item {
-  position: relative;
-  text-align: center;
 }
 
 page-category ion-title {
   text-align: center;
 }
 
+page-category .item {
+  color: #ed2024;
+}
+
+page-home .whiteBackground {
+  background-color: white;
+}
+
 page-home .card-background-page {
-  color: #4017d3;
+  background-color: #cccccc;
   font-family: sans-serif;
 }
 
@@ -25747,7 +25753,7 @@ page-home .card-background-page .card-title {
   font-size: 2.0em;
   width: 100%;
   font-weight: bold;
-  color: #4017d3;
+  color: #ed2024;
 }
 
 page-home .card-background-page .card-subtitle {
@@ -25755,9 +25761,10 @@ page-home .card-background-page .card-subtitle {
   position: absolute;
   top: 52%;
   width: 100%;
-  color: #4017d3;
+  color: #ed2024;
 }
 
 page-home ion-title {
   text-align: center;
+  color: black;
 }

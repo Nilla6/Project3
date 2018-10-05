@@ -14,9 +14,9 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.main {
+.mainStyle {
+    background-color: rgb(204, 204, 204);
     font-family: sans-serif;
-    color: rgb(64, 23, 211);
 }
 
 ion-title{

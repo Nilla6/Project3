@@ -1,23 +1,16 @@
 page-category {
 
-    .list-background-page { 
+    .ion-list-background-page { 
     	color: rgb(64, 23, 211);
         font-family: sans-serif;
-    
-    ion-list {
-        position: relative;
-        text-align: center;
-        }
+	}
 
-    ion-item {
-    	position: relative;
+    ion-title {
         text-align: center;
-        }
     }
 
-    ion-title{
-        text-align: center;
-        }
-
+    .item {
+    	color: rgb(237, 32, 36);
     }
+}
 

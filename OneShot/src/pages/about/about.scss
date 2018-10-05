@@ -1,31 +1,39 @@
 page-about {
 		
-		ion-title{
+        ion-title{
         text-align: center;
+        color: rgb(0, 0, 0);
         }
 
-        h1{
-        text-align: center;
+        .about-background-page {
+            background-color: rgb(204, 204, 204);
         }
 
-        h3{
-        text-align: center;
-        }
+            h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            }
 
-        p{
-        text-align: center;
-        }
+            h3{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            }
 
-        img {
-        position: relative;
-        }
+            p{
+            text-align: center;
+            color: rgb(237, 32, 36);
+            }
 
-        .rotateimg90 {
-         -webkit-transform:rotate(90deg);
-         -moz-transform: rotate(90deg);
-         -ms-transform: rotate(90deg);
-         -o-transform: rotate(90deg);
-         transform: rotate(90deg);
-        }
+            img {
+            position: relative;
+            }
+
+            .rotateimg90 {
+             -webkit-transform:rotate(90deg);
+             -moz-transform: rotate(90deg);
+             -ms-transform: rotate(90deg);
+             -o-transform: rotate(90deg);
+             transform: rotate(90deg);
+            }
 
 }
