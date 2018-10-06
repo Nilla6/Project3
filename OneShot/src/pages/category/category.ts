@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailsPage } from '../details/details'
 
 /**
  * Generated class for the CategoryPage page.
@@ -43,6 +44,10 @@ export class CategoryPage {
 
   itemSelected(item: string) {
     console.log("Selected Item", item);
+    this.navCtrl.push(DetailsPage, {
+      item: item
+    });
   }
+  
 
 }
