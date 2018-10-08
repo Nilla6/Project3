@@ -25768,3 +25768,9 @@ page-home ion-title {
   text-align: center;
   color: black;
 }
+
+page-login .line {
+  border-left: 1px solid #000000;
+  height: 10;
+  margin: 16px 0;
+}
