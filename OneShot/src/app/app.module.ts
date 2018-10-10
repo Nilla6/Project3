@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
@@ -19,7 +19,7 @@ import { DatabaseProvider } from '../providers/database/database';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    WelcomePage,
     LoginPage,
     AboutPage,
     CategoryPage,
@@ -33,7 +33,7 @@ import { DatabaseProvider } from '../providers/database/database';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    WelcomePage,
     LoginPage,
     AboutPage,
     CategoryPage,
