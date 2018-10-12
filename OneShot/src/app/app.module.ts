@@ -32,6 +32,7 @@ AngularFireModule.initializeApp(firebaseConfig.fire),
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig.fire),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,7 +48,8 @@ AngularFireModule.initializeApp(firebaseConfig.fire),
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatabaseProvider
+    DatabaseProvider,
+    AngularFireAuth
   ]
 })
 export class AppModule {}
