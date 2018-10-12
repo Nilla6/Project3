@@ -17,7 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
 
-AngularFireModule.initializeApp(firebaseConfig.fire),
+
 
 @NgModule({
   declarations: [
