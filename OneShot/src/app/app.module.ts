@@ -13,7 +13,11 @@ import { DetailsPage } from '../pages/details/details';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatabaseProvider } from '../providers/database/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from '../config';
 
+AngularFireModule.initializeApp(firebaseConfig.fire),
 
 @NgModule({
   declarations: [
