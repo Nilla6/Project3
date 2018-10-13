@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,8 +17,14 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  loginForm: FormGroup;
+  loginError: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, fb: FormBuilder, private auth: AuthService) {
+    this.loginForm = fb.group({
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
+    });
   }
 
   ionViewDidLoad() {
@@ -42,5 +50,23 @@ export class LoginPage {
 
   GoToAnotherPage(): void {
     this.navCtrl.setRoot(HomePage);  
+  }
+
+  login(){
+    let data = this.loginForm.value;
+
+    if (!data.email) {
+      return;
+    }
+
+    let credentials = {
+      email: data.email,
+      password: data.password
+    };
+    this.auth.signInWithEmail(credentials)
+      .then(
+        () => this.navCtrl.setRoot(HomePage),
+        error => this.loginError = error.message
+      );
   }
 }

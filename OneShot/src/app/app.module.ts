@@ -16,6 +16,7 @@ import { DatabaseProvider } from '../providers/database/database';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
+import { AuthService } from '../services/auth.service';
 
 
 
@@ -49,7 +50,8 @@ import { firebaseConfig } from '../config';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseProvider,
-    AngularFireAuth
+    AngularFireAuth,
+    AuthService
   ]
 })
 export class AppModule {}
