@@ -11,29 +11,20 @@
 
 
 <ion-content padding class='mainStyle'>
-  <form (ngSubmit)="login()" [formGroup]="loginForm">
+  <form>
     <ion-list>
-      <ion-item [ngClass]="{ invalid: emailError.hasError('*', ['touched', 'dirty'])}">
+      <ion-item>
         <ion-label floating>Email</ion-label>
-        <ion-input type="text" formControlName="email"></ion-input>
+        <ion-input type="text"></ion-input>
       </ion-item>
-
-      <div ngxErrors="email" #emailErrors="ngxErrors">
-        <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">It should be a valid email</div>
-      </div>
         
-      <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
-        <ion-label floating formControlName="password">Password</ion-label>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
-
-      <div ngxErrors="password" #passwordErrors="ngxErrors">
-        <div [ngxError]="['minlength', 'required']" [when]="['touched']">It should be at least 5 characters</div>
-      </div>
     </ion-list>
 
-    <div padding-horizontal>
-			<div class="form-error">{{loginError}}</div>
+    
 
 			<button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>
 			<div class="login-footer">
@@ -42,7 +33,6 @@
 					If you're a new user, please sign up.
 				</p>
 			</div>
-		</div>
   </form>
 
   <ion-row>
