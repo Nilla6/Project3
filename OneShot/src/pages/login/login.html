@@ -12,29 +12,33 @@
 
 <ion-content padding class='mainStyle'>
 
-    <ion-list>
-
-        <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
       
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
         
-        <button ion-button block (click)='Alert()'>Submit</button>
-      </ion-list>
+    <button ion-button block (click)='Alert()'>Submit</button>
+  </ion-list>
 
-          <ion-row>
-            <ion-col style="text-align: right">
-              <button ion-button round outline (click)='GoToAnotherPage()'>Guests</button>
-            </ion-col>
-            <ion-col style="text-align: left">
-              <button ion-button round outline (click)='Alert()'>Sign Up</button>
-            </ion-col>
-          </ion-row>
-
- 
+  <ion-row>
+    <ion-col style="text-align: right">
+      <button ion-button round outline (click)='GoToAnotherPage()'>Guests</button>
+    </ion-col>
+    <ion-col style="text-align: left">
+      <button ion-button round outline (click)='Alert()'>Sign Up</button>
+    </ion-col>
+  </ion-row>
+    
 </ion-content>
+
+<ion-footer>
+  <div class ="line">
+    <h1>test</h1>
+  </div>
+</ion-footer>
