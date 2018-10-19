@@ -18,7 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatabaseProvider } from '../providers/database/database';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { firebaseConfig } from '../config';
+import { firebaseConfig } from './config';
 import { AuthService } from '../services/auth.service';
 import { AgmCoreModule } from '@agm/core';
 
