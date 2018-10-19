@@ -11,27 +11,39 @@
 
 
 <ion-content padding class='mainStyle'>
-
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-      
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
         
-    <button ion-button block (click)='Alert()'>Submit</button>
-  </ion-list>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    
+
+			<button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>
+			<div class="login-footer">
+				<p>
+					<a href="#">Forgot password?</a>
+					If you're a new user, please sign up.
+				</p>
+			</div>
+  </form>
 
   <ion-row>
     <ion-col style="text-align: right">
       <button ion-button round outline (click)='GoToAnotherPage()'>Guests</button>
     </ion-col>
     <ion-col style="text-align: left">
-      <button ion-button round outline (click)='Alert()'>Sign Up</button>
+      <button ion-button round outline (click)='signup()'>
+        <ion-icon name="person-add"></ion-icon>
+        Sign Up
+      </button>
     </ion-col>
   </ion-row>
     
