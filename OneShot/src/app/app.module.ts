@@ -17,9 +17,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatabaseProvider } from '../providers/database/database';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { firebaseConfig } from './config';
-import { AuthService } from '../services/auth.service';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { firebaseConfig } from '../app/config';
 import { AgmCoreModule } from '@agm/core';
 
 
@@ -36,10 +35,12 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule.initializeApp(firebaseConfig),
     NgxErrorsModule,
     HttpModule,
     AgmCoreModule,
+    AngularFireAuthModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,9 +56,7 @@ import { AgmCoreModule } from '@agm/core';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatabaseProvider,
-    AngularFireAuth,
-    AuthService,
+    DatabaseProvider
 
   ]
 })

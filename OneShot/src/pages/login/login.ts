@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { SignupPage } from '../signup/signup';
 
 /**
  * Generated class for the LoginPage page.
@@ -20,7 +20,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class LoginPage {
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     
   }
 
@@ -47,6 +47,23 @@ export class LoginPage {
 
   GoToAnotherPage(): void {
     this.navCtrl.setRoot(HomePage);  
+  }
+
+  async login(user: User){
+    try{
+      const result = this.AFauth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
+      console.log(result);
+      if(result){
+        this.navCtrl.setRoot(HomePage);
+      }
+    }
+    catch(e){
+      console.error(e);
+    }
+  }
+
+  signUp(){
+    this.navCtrl.push('SignupPage');
   }
 
 }
