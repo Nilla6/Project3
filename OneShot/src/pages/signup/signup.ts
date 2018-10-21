@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../models/user';
 import {AngularFireAuth} from 'angularfire2/auth'
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the SignupPage page.
@@ -26,6 +27,9 @@ export class SignupPage {
     try{
      const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
      console.log(result);
+     if(result){
+      this.navCtrl.setRoot(LoginPage);
+    }
     }
     catch(e){
       console.error(e);

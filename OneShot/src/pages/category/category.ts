@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailsPage } from '../details/details'
+import { Category } from '../../models/categories';
+import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 
 /**
  * Generated class for the CategoryPage page.
@@ -16,8 +18,13 @@ import { DetailsPage } from '../details/details'
 })
 export class CategoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  categoriesRef$: AngularFireList<Category[]>
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase) {
+    this.categoriesRef$ = this.database.list('categories-list');
   }
+
+  category = {} as Category;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryPage');

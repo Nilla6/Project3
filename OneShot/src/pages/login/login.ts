@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -20,33 +20,12 @@ import { SignupPage } from '../signup/signup';
 export class LoginPage {
   user = {} as User;
 
-  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
     
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-  }
-
-  Alert() {
-    let confirm = this.alertCtrl.create({
-      title: 'Not Done Yet!',
-      message: 'This feature has not yet been completed. Will be completed soon.',
-      buttons: [
-        {
-          text: 'Ok',
-          handler: () => {
-            console.log('Agree clicked');
-            this.navCtrl.setRoot(HomePage);
-          }
-        }
-      ]
-    });
-    confirm.present()
-  }
-
-  GoToAnotherPage(): void {
-    this.navCtrl.setRoot(HomePage);  
   }
 
   async login(user: User){
@@ -63,7 +42,7 @@ export class LoginPage {
   }
 
   signUp(){
-    this.navCtrl.push('SignupPage');
+    this.navCtrl.push(SignupPage);
   }
 
 }

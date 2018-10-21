@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 
 
 /**
@@ -15,9 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'details.html',
 })
 export class DetailsPage {
-  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(navCtrl: NavController, public navParams: NavParams) {
     
   }
 

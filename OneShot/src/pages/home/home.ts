@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import { NavController, ToastController, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -10,7 +10,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class HomePage {
 
-  constructor(private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController) {
+  constructor(private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
 
@@ -33,5 +33,21 @@ export class HomePage {
       }
     });
       
+  }
+
+  Alert() {
+    let confirm = this.alertCtrl.create({
+      title: 'Not Done Yet!',
+      message: 'This feature has not yet been completed. Will be completed soon.',
+      buttons: [
+        {
+          text: 'Okay',
+          handler: () => {
+            console.log('Okay clicked');
+          }
+        }
+      ]
+    });
+    confirm.present()
   }
 }

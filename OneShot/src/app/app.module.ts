@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
 import { HttpModule } from '@angular/http';
-
+import { AngularFireDatabaseModule } from "angularfire2/database";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -39,7 +39,8 @@ import { AgmCoreModule } from '@agm/core';
     NgxErrorsModule,
     HttpModule,
     AgmCoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
     
   ],
   bootstrap: [IonicApp],
