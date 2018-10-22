@@ -45,4 +45,8 @@ export class LoginPage {
     this.navCtrl.push(SignupPage);
   }
 
+  GoToAnotherPage(): void {
+    this.navCtrl.setRoot(HomePage);  
+  }
+
 }

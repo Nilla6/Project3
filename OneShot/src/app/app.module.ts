@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { DetailsPage } from '../pages/details/details';
+import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +31,8 @@ import { AgmCoreModule } from '@agm/core';
     LoginPage,
     AboutPage,
     CategoryPage,
-    DetailsPage
+    DetailsPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,9 @@ import { AgmCoreModule } from '@agm/core';
     LoginPage,
     AboutPage,
     CategoryPage,
-    DetailsPage
+    DetailsPage,
+    SignupPage
+    
   ],
   providers: [
     StatusBar,

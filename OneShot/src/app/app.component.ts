@@ -8,6 +8,9 @@ import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { User } from '../models/user';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -17,11 +20,12 @@ export class MyApp {
 
   //rootPage: any = WelcomePage;
   rootPage = WelcomePage;
-  private menu: MenuController;  
+  private menu: MenuController; 
+  user = {} as User; 
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, menu: MenuController) {
+  constructor(private AFauth: AngularFireAuth, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, menu: MenuController) {
     this.initializeApp();
     this.menu = menu;
 
@@ -32,7 +36,14 @@ export class MyApp {
       { title: 'Categories', component: CategoryPage },
       { title: 'Login', component: LoginPage }
     ];
-
+    this.AFauth.auth.onAuthStateChanged(function(user){
+      if(user){
+        this.rootPage = 'HomePage';
+      }
+      else{
+        this.rootPage = 'WelcomePage';
+      }    
+    });
   }
 
   initializeApp() {
