@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { SignupPage } from '../signup/signup';
 
 /**
  * Generated class for the LoginPage page.
@@ -20,7 +20,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class LoginPage {
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
     
   }
 
@@ -28,21 +28,21 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  Alert() {
-    let confirm = this.alertCtrl.create({
-      title: 'Not Done Yet!',
-      message: 'This feature has not yet been completed. Will be completed soon.',
-      buttons: [
-        {
-          text: 'Ok',
-          handler: () => {
-            console.log('Agree clicked');
-            this.navCtrl.setRoot(HomePage);
-          }
-        }
-      ]
-    });
-    confirm.present()
+  async login(user: User){
+    try{
+      const result = this.AFauth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
+      console.log(result);
+      if(result){
+        this.navCtrl.setRoot(HomePage);
+      }
+    }
+    catch(e){
+      console.error(e);
+    }
+  }
+
+  signUp(){
+    this.navCtrl.push(SignupPage);
   }
 
   GoToAnotherPage(): void {

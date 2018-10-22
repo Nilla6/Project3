@@ -8,7 +8,9 @@ import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { AuthService } from '../services/auth.service';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { User } from '../models/user';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -17,12 +19,13 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //rootPage: any = WelcomePage;
-  rootPage;
-  private menu: MenuController;  
+  rootPage = WelcomePage;
+  private menu: MenuController; 
+  user = {} as User; 
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private auth: AuthService, menu: MenuController) {
+  constructor(private AFauth: AngularFireAuth, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, menu: MenuController) {
     this.initializeApp();
     this.menu = menu;
 
@@ -33,7 +36,14 @@ export class MyApp {
       { title: 'Categories', component: CategoryPage },
       { title: 'Login', component: LoginPage }
     ];
-
+    this.AFauth.auth.onAuthStateChanged(function(user){
+      if(user){
+        this.rootPage = 'HomePage';
+      }
+      else{
+        this.rootPage = 'WelcomePage';
+      }    
+    });
   }
 
   initializeApp() {
@@ -42,16 +52,6 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.auth.afAuth.authState
-        .subscribe(
-          user => {
-           if(user){
-              this.rootPage = HomePage;
-           } else {
-             this.rootPage = WelcomePage;
-            }
-          } 
-        );
     });
   }
 
@@ -63,7 +63,6 @@ export class MyApp {
 
   login(){
     this.menu.close();
-    this.auth.signOut();
     this.nav.setRoot(HomePage);
 
   }
