@@ -5,33 +5,35 @@ page-home {
     }
 
     .card-background-page {
-        background-color: rgb(204, 204, 204);
-        font-family: sans-serif;
+      background-color: rgb(204, 204, 204);
+      font-family: sans-serif;
 
-        ion-card {
-          position: relative;
-          text-align: center;
-        }
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
       
-        .card-title {
-          position: absolute;
-          top: 36%;
-          font-size: 2.0em;
-          width: 100%;
-          font-weight: bold;
-          color: rgb(237, 32, 36);
-        }
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(237, 32, 36);
+        }  
       
-        .card-subtitle {
-          font-size: 1.0em;
-          position: absolute;
-          top: 52%;
-          width: 100%;
-          color: rgb(237, 32, 36);
-        }
-
-        
+      .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: rgb(237, 32, 36);
+      }  
     }
+
+    .a.item-item{
+      background-color: transparent;
+  }
 
     ion-title{
         text-align: center;
