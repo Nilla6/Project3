@@ -19,6 +19,12 @@
     font-family: sans-serif;
 }
 
+ion-menu{
+    ion-content{
+     background-color:red !important;
+    }
+   }
+
 ion-title{
     text-align: center;
 }
