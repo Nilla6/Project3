@@ -18,14 +18,12 @@ import { User } from '../models/user';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  //rootPage: any = WelcomePage;
   rootPage = WelcomePage;
-  private menu: MenuController; 
   user = {} as User; 
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(private AFauth: AngularFireAuth, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, menu: MenuController) {
+  constructor(private AFauth: AngularFireAuth, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private menu: MenuController) {
     this.initializeApp();
     this.menu = menu;
 
@@ -38,10 +36,10 @@ export class MyApp {
     ];
     this.AFauth.auth.onAuthStateChanged(function(user){
       if(user){
-        this.rootPage = 'HomePage';
+        this.rootPage = HomePage;
       }
       else{
-        this.rootPage = 'WelcomePage';
+        this.rootPage = WelcomePage;
       }    
     });
   }
@@ -61,9 +59,4 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  login(){
-    this.menu.close();
-    this.nav.setRoot(HomePage);
-
-  }
 }
