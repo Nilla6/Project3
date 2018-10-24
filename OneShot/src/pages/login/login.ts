@@ -31,6 +31,7 @@ export class LoginPage {
   async login(user: User){
     try{
       const result = this.AFauth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
+      this.AFauth.auth.currentUser.getIdToken();
       console.log(result);
       if(result){
         this.navCtrl.setRoot(HomePage);
@@ -45,8 +46,16 @@ export class LoginPage {
     this.navCtrl.push(SignupPage);
   }
 
-  GoToAnotherPage(): void {
-    this.navCtrl.setRoot(HomePage);  
+  async Anonymous(user: User){
+    try{
+      const result = this.AFauth.auth.signInAnonymously();
+      console.log(result);
+      if(result){
+        this.navCtrl.setRoot(HomePage);
+      }
+    } catch(e){
+      console.error(e);
+    }
   }
 
 }

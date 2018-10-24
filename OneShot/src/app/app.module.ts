@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { NgxErrorsModule } from '@ultimate/ngxerrors';
-import { HttpModule } from '@angular/http';
-import { AngularFireDatabaseModule } from "angularfire2/database";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,11 +13,13 @@ import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { DatabaseProvider } from '../providers/database/database';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from '../app/config';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AgmCoreModule } from '@agm/core';
+
 
 
 @NgModule({
@@ -38,12 +37,10 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    NgxErrorsModule,
-    HttpModule,
     AgmCoreModule,
     AngularFireAuthModule,
-    AngularFireDatabaseModule
-    
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,14 +52,11 @@ import { AgmCoreModule } from '@agm/core';
     CategoryPage,
     DetailsPage,
     SignupPage
-    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatabaseProvider
-
   ]
 })
 export class AppModule {}
