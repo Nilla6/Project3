@@ -1,3 +1,36 @@
 page-details {
 
+        .ion-list-background-page { 
+    	color: rgb(64, 23, 211);
+        font-family: sans-serif;
+	    }
+
+    ion-card-title {
+        text-align: center;
+        color: rgb(237, 32, 36);
+    }
+
+    ion-card-header{
+        text-align: center;
+        color: rgb(237, 32, 36);
+    }
+
+    ion-card-content{
+        text-align: center;
+        color: rgb(237, 32, 36);
+    }
+
+    .item {
+    	color: rgb(237, 32, 36);
+    }
+
+    .item.item-input{
+        background-color: transparent;
+    }
+
+    p {
+        text-align: center;
+        color: rgb(237, 32, 36);
+    }
+
 }
