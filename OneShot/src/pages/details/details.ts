@@ -10,7 +10,7 @@ import {Bars} from "../../models/bars";
 })
 export class DetailsPage {
 
-  constructor(navCtrl: NavController, public navParams: NavParams) {
+  constructor(navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     
   }
 
