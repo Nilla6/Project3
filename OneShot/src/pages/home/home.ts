@@ -22,7 +22,7 @@ export class HomePage {
   }
 
   DatabaseInfo(){
-    this.db.list('/Categories/').valueChanges().subscribe(
+    this.db.list('/Categories/category/').valueChanges().subscribe(
       data => {
         console.log(data)
         this.infos = data

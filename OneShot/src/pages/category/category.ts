@@ -55,7 +55,7 @@ export class CategoryPage {
       item: item
     });
   }
-
+/*
   DatabaseInfo(){
     this.db.list('/bars/').valueChanges().subscribe(
       data => {
@@ -64,6 +64,6 @@ export class CategoryPage {
       }
     )
   }
-  
+*/
 
 }

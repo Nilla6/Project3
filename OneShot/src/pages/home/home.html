@@ -16,37 +16,11 @@
 </ion-header>
 
 <ion-content padding class="card-background-page">
+  
   <ion-card  *ngFor="let info of infos" (click) = "GoToAnotherPage()">
     <img src="assets/imgs/test.jpeg"/>
-    <div class="card-title">{{info}}</div>
-    <div class="card-subtitle">8 Listings</div>
+    <div class="card-title">{{info.name}}</div>
+    <div class="card-subtitle">{{info.listings}} Bars</div>
   </ion-card>
   
-  <!-- <a ion-item href="https://www.ionicframework.com">
-    Anchor Item
-  </a>
-  <ion-card (click) = "GoToAnotherPage()">
-    <img src="assets/imgs/test.jpeg"/>
-    <div class="card-title">Best Bars</div>
-    <div class="card-subtitle">8 Listings</div>
-  </ion-card>
-
-  <ion-card (click) = "GoToAnotherPage()">
-    <img src="assets/imgs/test2.png"/>
-    <div class="card-title">Most Loved</div>
-    <div class="card-subtitle">8 Listings</div>
-  </ion-card>
-
-  <ion-card (click) = "GoToAnotherPage()">
-    <img src="assets/imgs/test3.jpg"/>
-    <div class="card-title">Fine Dining</div>
-    <div class="card-subtitle">9 Listings</div>
-  </ion-card>
-
-  <ion-card (click) = "GoToAnotherPage()">
-    <img src="assets/imgs/test4.jpg"/>
-    <div class="card-title">Best Drinks Served</div>
-    <div class="card-subtitle">7 Listings</div>
-  </ion-card>
-  -->
 </ion-content>
