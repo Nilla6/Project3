@@ -57,8 +57,8 @@ document.querySelectorAll('#devsite-feedback-project'), false
 
 	<div text-center>
 		<ion-list>
-				<button ion-item *ngFor="let bar of bars" (click)="itemSelected(bar)">
-						{{ bar }}
+				<button ion-item *ngFor="let bar of bars" (click)="itemSelected(info)">
+						{{ bar.name }}
 					</button>
 		</ion-list>
 

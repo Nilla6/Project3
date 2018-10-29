@@ -20,7 +20,7 @@ export class CategoryPage {
 
   categoriesRef$: AngularFireList<Category[]>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     this.categoriesRef$ = this.database.list('categories-list');
   }
 
@@ -49,21 +49,21 @@ export class CategoryPage {
     "Buffalo Wild Wings",
   ];
 
-  itemSelected(item: string) {
-    console.log("Selected Item", item);
-    this.navCtrl.push(DetailsPage, {
-      item: item
-    });
-  }
-/*
   DatabaseInfo(){
-    this.db.list('/bars/').valueChanges().subscribe(
+    this.db.list('/Categories/bar/').valueChanges().subscribe(
       data => {
         console.log(data)
         this.bars = data
       }
     )
   }
-*/
+
+  itemSelected(item: string) {
+    console.log("Selected Item", item);
+    this.navCtrl.push(DetailsPage, {
+      item: item
+    });
+  }
+
 
 }
