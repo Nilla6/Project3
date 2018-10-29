@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ToastController, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 
 @Component({
@@ -9,13 +10,24 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  
+  infos;
 
-  constructor(private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
-
+  constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
+    this.DatabaseInfo();
   }
 
   GoToAnotherPage(): void {
     this.navCtrl.setRoot(CategoryPage);  
+  }
+
+  DatabaseInfo(){
+    this.db.list('/Categories/').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.infos = data
+      }
+    )
   }
 
   ionViewWillLoad(){

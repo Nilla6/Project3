@@ -17,7 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from '../app/config';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AgmCoreModule } from '@agm/core';
 
 
