@@ -1,0 +1,26 @@
+{
+    "Categories" : {
+        "category": [
+            {
+                "name" : "Best Bars",
+                "listings" : "6"
+            },
+
+            { 
+                "name": "Best Drinks Served",
+                "listings" : "7"
+            },
+
+            { 
+                "name": "Fine Dining",
+                "listings" : "8"
+            },
+
+            { 
+                "name": "Most Loved",
+                "listings" : "9"
+            }
+            
+        ]
+    }
+}
