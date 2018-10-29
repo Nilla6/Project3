@@ -55,6 +55,15 @@ export class CategoryPage {
       item: item
     });
   }
+
+  DatabaseInfo(){
+    this.db.list('/bars/').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.bars = data
+      }
+    )
+  }
   
 
 }
