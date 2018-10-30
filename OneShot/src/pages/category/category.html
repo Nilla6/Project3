@@ -14,8 +14,8 @@
 
 
 <ion-content padding class='mainStyle'>
-
-		<!--<div class="devsite-rating-container
+<!--
+		<div class="devsite-rating-container
 		"><div class="devsite-rating-stars"><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
  data-rating-val="1" data-category="Site-Wide Custom Events" data-label="Star Rating 1"
  track-metadata-score="1" track-type="feedback" track-name="rating"
@@ -53,15 +53,16 @@ document.querySelectorAll('#devsite-feedback-project'), false
 
 );
 });
-</script>-->
+</script>
+-->
 
 	<div text-center>
 		<ion-list>
-				<button ion-item *ngFor="let bar of bars" (click)="itemSelected(info)">
+				<button ion-item *ngFor="let bar of bars" (click)="itemSelected(bar)">
 						{{ bar.name }}
 					</button>
 		</ion-list>
-
+<!--
 		<ion-list>
 			<br>	
 		  <ion-list-header>
@@ -148,6 +149,7 @@ document.querySelectorAll('#devsite-feedback-project'), false
 
 		  <ion-item>Tequilla<ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon></ion-item>
 		</ion-list>
+	-->	
 	</div>
 
 </ion-content>

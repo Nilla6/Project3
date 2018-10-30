@@ -21,36 +21,19 @@ export class CategoryPage {
   categoriesRef$: AngularFireList<Category[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.categoriesRef$ = this.database.list('categories-list');
+    this.categoriesRef$ = this.db.list('categories-list');
+    this.DatabaseInfo();
   }
 
   category = {} as Category;
+  bars;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryPage');
   }
 
-  items = [
-    "The Library",
-    "Roosters Blues House",
-    "Snackbar",
-    "The Growler",
-    "Proud Larry's",
-    "The Levee",
-    "The Round Table",
-    "Funky's Pizza and Daiquiri Bar",
-    "El Mariachi Grill",
-    "Kabuki",
-    "Toyo Japanese Sushi Bar and Grill",
-    "Chili's Grill & Bar",
-    "El Agave",
-    "Papito's Mexiacan Grill",
-    "Pita Pit",
-    "Buffalo Wild Wings",
-  ];
-
   DatabaseInfo(){
-    this.db.list('/Categories/bar/').valueChanges().subscribe(
+    this.db.list('/Bars/Bar/').valueChanges().subscribe(
       data => {
         console.log(data)
         this.bars = data
@@ -58,10 +41,10 @@ export class CategoryPage {
     )
   }
 
-  itemSelected(item: string) {
-    console.log("Selected Item", item);
+  itemSelected(bars) {
+    console.log("Selected Item", bars);
     this.navCtrl.push(DetailsPage, {
-      item: item
+      selectedBar : bars
     });
   }
 
