@@ -21,30 +21,30 @@ export class CategoryPage {
   categoriesRef$: AngularFireList<Category[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.categoriesRef$ = this.db.list('categories-list');
+    //this.categoriesRef$ = this.db.list('categories-list');
     this.DatabaseInfo();
   }
 
-  category = {} as Category;
-  bars;
+
+  infos;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryPage');
   }
 
   DatabaseInfo(){
-    this.db.list('/Bars/Bar/').valueChanges().subscribe(
+    this.db.list('/Categories/category/').valueChanges().subscribe(
       data => {
         console.log(data)
-        this.bars = data
+        this.infos = data
       }
     )
   }
 
-  itemSelected(bars) {
-    console.log("Selected Item", bars);
+  itemSelected(infos) {
+    console.log("Selected Item", infos);
     this.navCtrl.push(DetailsPage, {
-      selectedBar : bars
+      selectedBar : infos
     });
   }
 
