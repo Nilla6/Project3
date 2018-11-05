@@ -61,8 +61,8 @@ document.querySelectorAll('#devsite-feedback-project'), false
 				<ion-list-header>
 						{{info.name}} 
 				</ion-list-header>
-				<button ion-item *ngFor="let barname of infos.bars" (click)="itemSelected(barname)">
-						{{info.bars.barname}}
+				<button ion-item *ngFor="let barname of barnames" (click)="itemSelected(barname)">
+						{{bars.barname}}
 				</button>
 				<br>
 		</ion-list>
