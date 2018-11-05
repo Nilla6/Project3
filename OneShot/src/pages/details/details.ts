@@ -9,9 +9,9 @@ import {Bars} from "../../models/bars";
   templateUrl: 'details.html',
 })
 export class DetailsPage {
-bars;
+infos;
   constructor(navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.bars = navParams.get('selectedBar');
+    this.infos = navParams.get('selectedBar');
   }
 
   ionViewDidLoad() {
