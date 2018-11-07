@@ -3,24 +3,237 @@
         "category": [
             {
                 "name" : "Best Bars",
-                "listings" : "6"
+                "listings" : "7",
+                "bars": [
+                    {
+                        "barname" : "The Levee",
+                        "description": "The Levee is a well-known bar for college kids and up to go to on the weekends. They have some bar food, but their main attraction is all the deals on the drinks served there. They offer deals on drinks and food from Monday-Saturday. There is a deal on happy hour and then a deal at night time. This is a place you would want to go for drinks. ",
+                        "drink" : "blackout bucket"
+                    },
+
+                    {
+                        "barname" : "The Library",
+                        "description": "The Library is a bar off the square. It is a place where the food and drinks there are not that expensive. The bar makes you pay a $20 cover fee to get in. Other than that, this bar is a good place to go for your first night out or your first bar night.",
+                        "drink": "cocktails"
+                    },
+
+                    {
+                        "barname" : "Roosters Blues House",
+                        "description": "Rooster’s Blues House is a bar and music venue off the square of Oxford, Ms. They are known for their drinks, hamburgers, and BBQ. If you want to have a good time, go to Rooster’s for live music and alcohol.",
+                        "drink" : "whiskey" 
+                    },
+
+                    {
+                        "barname" : "Funky's Pizza and Daiquiri Bar",
+                        "description": "Funky’s Pizza and Daiquiri Bar in Oxford offers great pizza and great daiquiri bar. They are known for their special daiquiris they serve. They also have a full bar available if daiquiris are not your thing. They have some daiquiris called the Skinny Bitch, Taylor Swift, and much more flavors. You are sure to find a daiquiri here to be your favorite. ",
+                        "drink" : "taylor swift"
+                    },
+
+                    {
+                        "barname" : "The Growler",
+                        "description": "The growler is located on north Lamar street in Oxford, Ms. This bar is known for its beer and live music. They are not that expensive to buy here. They have over 30 taps of quality craft beer for you to choose from. If you are looking for a good beer in Oxford, then you should go here for your night out.",
+                        "drink" : "beer float"
+                    },
+
+                    {
+                        "barname" : "The Round Table",
+                        "description": "The Round Table is one of the more popular bars off the square. They offer great deals on drinks and food for the night life. They have food specials, drink specials, and happy hour specials along with their normal menu. The happy hour specials only go up to $4. The drink specials are different based on night you go. On Monday, they offer domestic beers for $2. On Tuesday, they offer two margaritas for price of one. On Wednesday, they offer a lady’s night which is $2 wine. Finally, they offer two well drinks for price of one on Thursday. You can always go here for good night out for their drink and happy hour deals. ",
+                        "drink" : "cocktails"
+                    },
+
+                    {
+                        "barname" : "Proud Larry's",
+                        "description": "Proud Larry’s is a bar and restaurant with Italian cuisine and live music shows. They sell tickets to their shows on their website. Their food and drinks are average priced for the area. They are well known for their shows, drinks, and food they serve. ",
+                        "drink" :"whiskey"
+                    }
+                ]
             },
 
             { 
                 "name": "Best Drinks Served",
-                "listings" : "7"
+                "listings" : "10",
+                "bars" :[
+                    {
+                        "barname" : "Chili's Grill & Bar",
+                        "description": "Chili’s grill and bar is great place to grab cheap but good drinks while having a meal. They have good food, but also great deals on drinks. They have beer, whiskey, cocktails, and maragritas all at their bar. They also have a special on 2 for 1 drink. You can order a drink but get two glasses instead of one. An excellent place to get good deals on drinks and even buy you an appetizer too. ",
+                        "drink" : "margaritas"
+                    },
+
+                    {
+                        "barname" : "The Levee",
+                        "description": "The Levee is a well-known bar for college kids and up to go to on the weekends. They have some bar food, but their main attraction is all the deals on the drinks served there. They offer deals on drinks and food from Monday-Saturday. There is a deal on happy hour and then a deal at night time. This is a place you would want to go for drinks. ",
+                        "drink" : "blackout bucket" 
+                    },
+
+                    {
+                        "barname" : "Roosters Blues House",
+                        "description": "Rooster’s Blues House is a bar and music venue off the square of Oxford, Ms. They are known for their drinks, hamburgers, and BBQ. If you want to have a good time, go to Rooster’s for live music and alcohol.",
+                        "drink" : "whiskey"
+                    },
+
+                    {
+                        "barname" : "Funky's Pizza and Daiquiri Bar",
+                        "description": "Funky’s Pizza and Daiquiri Bar in Oxford offers great pizza and great daiquiri bar. They are known for their special daiquiris they serve. They also have a full bar available if daiquiris are not your thing. They have some daiquiris called the Skinny Bitch, Taylor Swift, and much more flavors. You are sure to find a daiquiri here to be your favorite. ",
+                        "drink" : "taylor swift"
+                    },
+
+                    {
+                        "barname" : "The Growler",
+                        "description": "The growler is located on north Lamar street in Oxford, Ms. This bar is known for its beer and live music. They are not that expensive to buy here. They have over 30 taps of quality craft beer for you to choose from. If you are looking for a good beer in Oxford, then you should go here for your night out.",
+                        "drink" : "beer float"
+                    },
+
+                    {
+                        "barname" : "The Round Table",
+                        "description": "The Round Table is one of the more popular bars off the square. They offer great deals on drinks and food for the night life. They have food specials, drink specials, and happy hour specials along with their normal menu. The happy hour specials only go up to $4. The drink specials are different based on night you go. On Monday, they offer domestic beers for $2. On Tuesday, they offer two margaritas for price of one. On Wednesday, they offer a lady’s night which is $2 wine. Finally, they offer two well drinks for price of one on Thursday. You can always go here for good night out for their drink and happy hour deals. ",
+                        "drink" : "cocktails" 
+                    },
+
+                    {
+                        "barname" : "Toyo Japanese Sushi Bar and Grill",
+                        "description": "Kabuki is a sushi bar located in our small town of Oxford, Ms. They have a drink menu available for their customers along with their normal food menu. The drinks they serve are cocktails/specialty drinks and Asian wine/sake. The best drinks would have to be a Walk Me Down, Rebel’s Mai Tai, and Purple Haze. If you would like great drinks with good sushi, then this is the place to be. ",
+                        "drink" : "wine"
+                    },
+
+                    {
+                        "barname" : "Kabuki",
+                        "description": "Kabuki is a sushi bar located in our small town of Oxford, Ms. They have a drink menu available for their customers along with their normal food menu. The drinks they serve are cocktails/specialty drinks and Asian wine/sake. The best drinks would have to be a Walk Me Down, Rebel’s Mai Tai, and Purple Haze. If you would like great drinks with good sushi, then this is the place to be. ",
+                        "drink" : "rebel's mai tai"
+                    },
+
+                    {
+                        "barname" : "El Agave",
+                        "description": "El Agave is another Mexican place located in Oxford. Along with their food menu, they also have a drink menu for people looking for a good time. El Agave serves Margaritas, Daiquiris, specialty shots, tequila, beer: bottled and draft, wines, and specialty mixed drinks. With their wide selection, I’m sure you can find one to celebrate your night.  ",
+                        "drink" : "tequila"
+                    },
+
+                    {
+                        "barname" : "Buffalo Wild Wings",
+                        "description": "Buffalo Wild Wings is known for its beer, wings, and sports. They have their own bar area besides all the dining areas. You can sit at the bar ad order whatever drink you wanted off their menu. They have beer to specialty drinks available for anyone who wants to buy a drink. ",
+                        "drink" : "beer"
+                    }
+                ]
             },
 
             { 
                 "name": "Fine Dining",
-                "listings" : "8"
+                "listings" : "9",
+                "bars" :[
+                    {
+                        "barname" : "Toyo Japanese Sushi Bar and Grill",
+                        "description": "Kabuki is a sushi bar located in our small town of Oxford, Ms. They have a drink menu available for their customers along with their normal food menu. The drinks they serve are cocktails/specialty drinks and Asian wine/sake. The best drinks would have to be a Walk Me Down, Rebel’s Mai Tai, and Purple Haze. If you would like great drinks with good sushi, then this is the place to be. ",
+                        "drink" : "wine"
+                    },
+
+                    {
+                        "barname" : "Kabuki",
+                        "description": "Kabuki is a sushi bar located in our small town of Oxford, Ms. They have a drink menu available for their customers along with their normal food menu. The drinks they serve are cocktails/specialty drinks and Asian wine/sake. The best drinks would have to be a Walk Me Down, Rebel’s Mai Tai, and Purple Haze. If you would like great drinks with good sushi, then this is the place to be. ",
+                        "drink" : "rebel's mai tai"
+                    },
+
+                    {
+                        "barname" : "The Snackbar",
+                        "description": "The Snackbar is a local cuisine place that serves fine dining with some wine and other drinks. They are a bit on the pricey side Oxford, Ms. They have happy hour where they serve domestics for $2, drafts for $3, wines for $4, and cocktails ranging from daiquiris to margaritas for $5. They will also serve whiskey, beer, cocktails, and wine on any normal time. ",
+                        "drink" : "wine"
+                    },
+
+                    {
+                        "barname" : "Pita Pit",
+                        "description": "Pita Pit is a sandwich place that also has a bar. It is located off the square area. Pita Pit stays open until 2 am most days. Their bar area is extensive. They serve wines, margaritas, beers, whiskey, and specialty drinks. If you want a shot or any drink, you will be able to find that here right off the square. ",
+                        "drink" : "cocktails"
+                    },
+
+                    {
+                        "barname" : "Buffalo Wild Wings",
+                        "description": "Buffalo Wild Wings is known for its beer, wings, and sports. They have their own bar area besides all the dining areas. You can sit at the bar ad order whatever drink you wanted off their menu. They have beer to specialty drinks available for anyone who wants to buy a drink. ",
+                        "drink" : "beer" 
+                    },
+
+                    {
+                        "barname" : "Chili's Grill & Bar",
+                        "description": "Chili’s grill and bar is great place to grab cheap but good drinks while having a meal. They have good food, but also great deals on drinks. They have beer, whiskey, cocktails, and maragritas all at their bar. They also have a special on 2 for 1 drink. You can order a drink but get two glasses instead of one. An excellent place to get good deals on drinks and even buy you an appetizer too. ",
+                        "drink" : "margaritas"
+                    },
+
+                    {
+                        "barname" : "El Agave",
+                        "description": "El Agave is another Mexican place located in Oxford. Along with their food menu, they also have a drink menu for people looking for a good time. El Agave serves Margaritas, Daiquiris, specialty shots, tequila, beer: bottled and draft, wines, and specialty mixed drinks. With their wide selection, I’m sure you can find one to celebrate your night.  ",
+                        "drink" : "tequila"
+                    },
+
+                    {
+                        "barname" : "El Mariachi Grill",
+                        "description": "El Mariachi Grill is a Mexican grill and bar available to go eat and have a drink or two in Oxford. Their food and bar service are quick. They always have a cold beer to serve their customers from the bar. It is a popular spot for some drinks and good food. ",
+                        "drink" : "beer"
+                    },
+
+                    {
+                        "barname" : "Papito's Mexican Grill",
+                        "description": "Papito’s Mexican Grill is a Mexican grill that also serves a variety of alcohol in Oxford. On their drink menu, they have tequila shots, wines, beers, and margaritas available. If you ever need a shot or a good drink, this is the place to go while enjoying your meal.",
+                        "drink" : "margaritas"
+                    }
+                ]
             },
 
             { 
                 "name": "Most Loved",
-                "listings" : "9"
+                "listings" : "9",
+                "bars" :[
+                    {
+                        "barname" : "Toyo Japanese Sushi Bar and Grill",
+                        "description": "Kabuki is a sushi bar located in our small town of Oxford, Ms. They have a drink menu available for their customers along with their normal food menu. The drinks they serve are cocktails/specialty drinks and Asian wine/sake. The best drinks would have to be a Walk Me Down, Rebel’s Mai Tai, and Purple Haze. If you would like great drinks with good sushi, then this is the place to be. ",
+                        "drink" : "wine"
+                    },
+
+                    {
+                        "barName" : "The Levee",
+                        "description": "The Levee is a well-known bar for college kids and up to go to on the weekends. They have some bar food, but their main attraction is all the deals on the drinks served there. They offer deals on drinks and food from Monday-Saturday. There is a deal on happy hour and then a deal at night time. This is a place you would want to go for drinks. ",
+                        "drink" : "blackout bucket"
+                    },
+
+                    {
+                        "barname" : "Roosters Blues House",
+                        "description": "Rooster’s Blues House is a bar and music venue off the square of Oxford, Ms. They are known for their drinks, hamburgers, and BBQ. If you want to have a good time, go to Rooster’s for live music and alcohol.",
+                        "drink" : "whiskey"
+                    },
+
+                    {
+                        "barname" : "Funky's Pizza and Daiquiri Bar",
+                        "description": "Funky’s Pizza and Daiquiri Bar in Oxford offers great pizza and great daiquiri bar. They are known for their special daiquiris they serve. They also have a full bar available if daiquiris are not your thing. They have some daiquiris called the Skinny Bitch, Taylor Swift, and much more flavors. You are sure to find a daiquiri here to be your favorite. ",
+                        "drink" : "taylor swift"
+                    },
+
+                    {
+                        "barname" : "The Growler",
+                        "description": "The growler is located on north Lamar street in Oxford, Ms. This bar is known for its beer and live music. They are not that expensive to buy here. They have over 30 taps of quality craft beer for you to choose from. If you are looking for a good beer in Oxford, then you should go here for your night out.",
+                        "drink" : "beer float"
+                    },
+
+                    {
+                        "barname" : "The Round Table",
+                        "description": "The Round Table is one of the more popular bars off the square. They offer great deals on drinks and food for the night life. They have food specials, drink specials, and happy hour specials along with their normal menu. The happy hour specials only go up to $4. The drink specials are different based on night you go. On Monday, they offer domestic beers for $2. On Tuesday, they offer two margaritas for price of one. On Wednesday, they offer a lady’s night which is $2 wine. Finally, they offer two well drinks for price of one on Thursday. You can always go here for good night out for their drink and happy hour deals. ",
+                        "drink" : "cocktails"
+                    },
+
+                    {
+                        "barname" : "The Snackbar",
+                        "description": "The Snackbar is a local cuisine place that serves fine dining with some wine and other drinks. They are a bit on the pricey side Oxford, Ms. They have happy hour where they serve domestics for $2, drafts for $3, wines for $4, and cocktails ranging from daiquiris to margaritas for $5. They will also serve whiskey, beer, cocktails, and wine on any normal time. ",
+                        "drink" : "wine"
+                    },
+
+                    {
+                        "barname" : "Chili's Grill & Bar",
+                        "description": "Chili’s grill and bar is great place to grab cheap but good drinks while having a meal. They have good food, but also great deals on drinks. They have beer, whiskey, cocktails, and maragritas all at their bar. They also have a special on 2 for 1 drink. You can order a drink but get two glasses instead of one. An excellent place to get good deals on drinks and even buy you an appetizer too. ",
+                        "drink" : "margaritas"
+                    },
+
+                    {
+                        "barname" : "Proud Larry's",
+                        "description": "Proud Larry’s is a bar and restaurant with Italian cuisine and live music shows. They sell tickets to their shows on their website. Their food and drinks are average priced for the area. They are well known for their shows, drinks, and food they serve. ",
+                        "drink" :"whiskey"
+                    }
+                ]
             }
             
         ]
-    }
-}
+    }}

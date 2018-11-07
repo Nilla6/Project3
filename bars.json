@@ -1,20 +1,70 @@
 {
     "Bars": {
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
-        "name": ,
+        "bar": [
+            {
+                "name" : "The Library"
+            },
+
+            {
+                "name" : "The Roosters Blues House"
+            },
+
+            {
+                "name" : "The Snackbar"
+            },
         
+            {
+                "name" : "The Growler"
+            },
+
+            {
+                "name" : "Proud Larry's"
+            },
+
+            {
+                "name" : "The Levee"
+            },
+
+            {
+                "name" : "The Round Table"
+            },
+
+            {
+                "name" : "Funky's Pizza and Daiquiri Bar"
+            },
+
+            {
+                "name" : "El Mariachi Grill"
+            },
+
+            {
+                "name" : "Kabuki"
+            },
+
+            {
+                "name" : "Toyo Japanese Sushi Bar and Grill"
+            },
+
+            {
+                "name" : "Chili's Grill & Bar"
+            },
+
+            {
+                "name" : "El Agave"
+            },
+
+            {
+                "name" : "Papito's Mexican Grill"
+            },
+
+            {
+                "name" : "Pita Pit"
+            },
+
+            {
+                "name" : "Buffalo Wild Wings"
+            }
+        
+        ]    
     }
 }
