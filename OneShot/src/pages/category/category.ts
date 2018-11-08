@@ -18,15 +18,18 @@ import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 })
 export class CategoryPage {
 
-  categoriesRef$: AngularFireList<Category[]>
+ // categoriesRef$: AngularFireList<Category[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     //this.categoriesRef$ = this.db.list('categories-list');
     this.DatabaseInfo();
+    this.BarInfo();
   }
 
 
   infos;
+  bar;
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryPage');
@@ -41,10 +44,20 @@ export class CategoryPage {
     )
   }
 
-  itemSelected(infos) {
+  BarInfo(){
+    this.db.list('/Categories/category/').valueChanges().subscribe(
+      info => {
+        console.log(info)
+        this.bar = info
+      }
+    )
+  }
+
+  itemSelected(infos, barInfos) {
     console.log("Selected Item", infos);
     this.navCtrl.push(DetailsPage, {
-      selectedBar : infos
+      selectedBar : infos,
+      bars : bar
     });
   }
 

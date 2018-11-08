@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
-import {Bars} from "../../models/bars";
+import { AngularFireDatabase} from "@angular/fire/database";
+
 
 @IonicPage()
 @Component({
@@ -11,7 +11,7 @@ import {Bars} from "../../models/bars";
 export class DetailsPage {
 infos;
   constructor(navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.infos = navParams.get('selectedbarname');
+    this.infos = navParams.get('selectedBar');
   }
 
   ionViewDidLoad() {
