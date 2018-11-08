@@ -59,10 +59,10 @@ document.querySelectorAll('#devsite-feedback-project'), false
 	<div text-center>
 		<ion-list *ngFor="let info of infos">
 				<ion-list-header>
-						{{info.name}} 
+					{{info.name}}
 				</ion-list-header>
 				<button ion-item *ngFor="let bar of bars" (click)="itemSelected(bar)">
-						{{bar.barname}}
+					{{bar.barname}}
 				</button>
 				<br>
 		</ion-list>
