@@ -206,15 +206,15 @@ var map = {
 		3
 	],
 	"../pages/details/details.module": [
-		533,
+		535,
 		2
 	],
 	"../pages/login/login.module": [
-		534,
+		533,
 		1
 	],
 	"../pages/signup/signup.module": [
-		535,
+		534,
 		0
 	]
 };
@@ -371,9 +371,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/category/category.module#CategoryPageModule', name: 'CategoryPage', segment: 'category', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/details/details.module#DetailsPageModule', name: 'DetailsPage', segment: 'details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/details/details.module#DetailsPageModule', name: 'DetailsPage', segment: 'details', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_13_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_15__app_config__["a" /* firebaseConfig */]),
@@ -695,7 +695,7 @@ var CategoryPage = /** @class */ (function () {
     };
     CategoryPage.prototype.BarInfo = function () {
         var _this = this;
-        this.db.list('/Categories/category/').valueChanges().subscribe(function (info) {
+        this.db.list('/Categories/Bars/').valueChanges().subscribe(function (info) {
             console.log(info);
             _this.bar = info;
         });
@@ -704,7 +704,7 @@ var CategoryPage = /** @class */ (function () {
         console.log("Selected Item", infos);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__details_details__["a" /* DetailsPage */], {
             selectedBar: infos,
-            bars: bar
+            bars: infos
         });
     };
     var _a, _b, _c;

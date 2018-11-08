@@ -45,7 +45,7 @@ export class CategoryPage {
   }
 
   BarInfo(){
-    this.db.list('/Categories/category/').valueChanges().subscribe(
+    this.db.list('/Categories/Bars/').valueChanges().subscribe(
       info => {
         console.log(info)
         this.bar = info
@@ -57,7 +57,7 @@ export class CategoryPage {
     console.log("Selected Item", infos);
     this.navCtrl.push(DetailsPage, {
       selectedBar : infos,
-      bars : bar
+      bars : infos
     });
   }
 
