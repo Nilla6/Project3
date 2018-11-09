@@ -163,11 +163,12 @@ var DetailsPage = /** @class */ (function () {
     DetailsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad DetailsPage');
     };
+    var _a, _b, _c;
     DetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-details',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <div text-center>\n\n   		 <img src = "assets/imgs/OneShotLogo-white.jpg" width = "auto" height = "auto" alt = "OneShot">\n\n   	</div>\n\n    <ion-title>\n\n      <ion-label>{{bar.bar}}</ion-label>\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="mainStyle">\n\n    <ion-card>\n\n        <img src="assets/imgs/test.jpeg"/>\n\n        <ion-card-content>\n\n          <ion-card-title>\n\n            {{bar.barname}}\n\n          </ion-card-title>\n\n          <p>\n\n            {{bar.description}}\n\n          </p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-content padding class="mainStyle">\n\n        <ion-card>\n\n            <img src="assets/imgs/test.jpeg"/>\n\n            <ion-card-content>\n\n              <ion-card-title>\n\n                Best Drink\n\n                </ion-card-title>\n\n              <p>\n\n                {{bar.drink}}\n\n              </p>\n\n            </ion-card-content>\n\n          </ion-card>\n\n\n\n      <ion-card>\n\n        <ion-card-header>\n\n          Rating\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          <ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon>\n\n            <ion-icon name="flame" item-end></ion-icon>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-list>\n\n\n\n          <ion-item>\n\n            <ion-label floating>Comments on Drinks or Bar</ion-label>\n\n            <ion-textarea type="text"></ion-textarea>\n\n          </ion-item>\n\n          <button ion-button block>Submit</button>\n\n        \n\n        </ion-list>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/,
+            selector: 'page-details',template:/*ion-inline-start:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <div text-center>\n\n   		 <img src = "assets/imgs/OneShotLogo-white.jpg" width = "auto" height = "auto" alt = "OneShot">\n\n   	</div>\n\n    <ion-title>\n\n      <ion-label>{{bar.barname}}</ion-label>\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="mainStyle">\n\n    <ion-card>\n\n        <img src="assets/imgs/test.jpeg"/>\n\n        <ion-card-content>\n\n          <ion-card-title>\n\n            {{bar.barname}}\n\n          </ion-card-title>\n\n          <p>\n\n            {{bar.description}}\n\n          </p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-content padding class="mainStyle">\n\n        <ion-card>\n\n            <img src="assets/imgs/test.jpeg"/>\n\n            <ion-card-content>\n\n              <ion-card-title>\n\n                Best Drink\n\n                </ion-card-title>\n\n              <p>\n\n                {{bar.drink}}\n\n              </p>\n\n            </ion-card-content>\n\n          </ion-card>\n\n\n\n      <ion-card>\n\n        <ion-card-header>\n\n          Rating\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n          <ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon><ion-icon name="flame" item-end></ion-icon>\n\n            <ion-icon name="flame" item-end></ion-icon>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-list>\n\n\n\n          <ion-item>\n\n            <ion-label floating>Comments on Drinks or Bar</ion-label>\n\n            <ion-textarea type="text"></ion-textarea>\n\n          </ion-item>\n\n          <button ion-button block>Submit</button>\n\n        \n\n        </ion-list>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\kasey\desktop\project3\OneShot\src\pages\details\details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_database__["a" /* AngularFireDatabase */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_fire_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_fire_database__["a" /* AngularFireDatabase */]) === "function" ? _c : Object])
     ], DetailsPage);
     return DetailsPage;
 }());
@@ -202,19 +203,19 @@ var map = {
 		4
 	],
 	"../pages/category/category.module": [
-		532,
+		535,
 		3
 	],
 	"../pages/details/details.module": [
-		533,
+		532,
 		2
 	],
 	"../pages/login/login.module": [
-		534,
+		533,
 		1
 	],
 	"../pages/signup/signup.module": [
-		535,
+		534,
 		0
 	]
 };
@@ -370,10 +371,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/category/category.module#CategoryPageModule', name: 'CategoryPage', segment: 'category', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/details/details.module#DetailsPageModule', name: 'DetailsPage', segment: 'details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/category/category.module#CategoryPageModule', name: 'CategoryPage', segment: 'category', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_13_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_15__app_config__["a" /* firebaseConfig */]),
