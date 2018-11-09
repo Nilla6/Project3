@@ -44,19 +44,11 @@ export class CategoryPage {
     )
   }
 
-<<<<<<< HEAD
-  BarInfo(){
-    this.db.list('/Categories/Bars/').valueChanges().subscribe(
-      data => {
-        console.log(data)
-        this.bars = data
-=======
   CategoryInfo(){
     this.db.list('/Categories/category/').valueChanges().subscribe(
       data => {
         console.log(data)
         this.infos = data
->>>>>>> ab4b3616fa06ac8591c5fc012987577b3cc0928e
       }
     )
   }
