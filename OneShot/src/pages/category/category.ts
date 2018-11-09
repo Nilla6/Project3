@@ -22,8 +22,8 @@ export class CategoryPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     //this.categoriesRef$ = this.db.list('categories-list');
-    this.DatabaseInfo();
     this.BarInfo();
+    this.CategoryInfo();
   }
 
 
@@ -35,17 +35,8 @@ export class CategoryPage {
     console.log('ionViewDidLoad CategoryPage');
   }
 
-  DatabaseInfo(){
-    this.db.list('/Categories/category/').valueChanges().subscribe(
-      data => {
-        console.log(data)
-        this.infos = data
-      }
-    )
-  }
-
   BarInfo(){
-    this.db.list('/Categories/Bars/').valueChanges().subscribe(
+    this.db.list('/Bars/bar/').valueChanges().subscribe(
       data => {
         console.log(data)
         this.bars = data
@@ -53,11 +44,27 @@ export class CategoryPage {
     )
   }
 
-  itemSelected(infos, barInfos) {
-    console.log("Selected Item", infos);
+<<<<<<< HEAD
+  BarInfo(){
+    this.db.list('/Categories/Bars/').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.bars = data
+=======
+  CategoryInfo(){
+    this.db.list('/Categories/category/').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.infos = data
+>>>>>>> ab4b3616fa06ac8591c5fc012987577b3cc0928e
+      }
+    )
+  }
+
+  itemSelected(bars) {
+    console.log("Selected Item", bars);
     this.navCtrl.push(DetailsPage, {
-      selectedBar : infos,
-      bars : infos
+      selectedBar : bars
     });
   }
 

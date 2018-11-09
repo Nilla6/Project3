@@ -9,9 +9,9 @@ import { AngularFireDatabase} from "@angular/fire/database";
   templateUrl: 'details.html',
 })
 export class DetailsPage {
-infos;
+bars;
   constructor(navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.infos = navParams.get('selectedBar');
+    this.bars = navParams.get('selectedBar');
   }
 
   ionViewDidLoad() {
