@@ -28,7 +28,7 @@ export class CategoryPage {
 
 
   infos;
-  bar;
+  bars;
   
 
   ionViewDidLoad() {
@@ -46,9 +46,9 @@ export class CategoryPage {
 
   BarInfo(){
     this.db.list('/Categories/Bars/').valueChanges().subscribe(
-      info => {
-        console.log(info)
-        this.bar = info
+      data => {
+        console.log(data)
+        this.bars = data
       }
     )
   }
