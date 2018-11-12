@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailsPage } from '../details/details'
-import { Category } from '../../models/categories';
+import { Bars } from '../../models/bars';
 import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 
 /**
@@ -18,10 +18,10 @@ import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 })
 export class CategoryPage {
 
- // categoriesRef$: AngularFireList<Category[]>
+ barRef$: AngularFireList<Bars[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    //this.categoriesRef$ = this.db.list('categories-list');
+    this.barRef$ = this.db.list('bars-info');
     this.BarInfo();
     this.CategoryInfo();
   }
