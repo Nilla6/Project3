@@ -20,6 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileService } from '../services/profile.service';
 
 
 
@@ -59,6 +60,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProfileService,
   ]
 })
 export class AppModule {}
@@ -66,5 +68,5 @@ export class AppModule {}
 export class UserProfile{
 fn = "First Name"
 ln = "Last Name"
-image = " "
+img = " "
 }
