@@ -19,6 +19,7 @@ import { firebaseConfig } from '../app/config';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AgmCoreModule } from '@agm/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -40,7 +41,8 @@ import { AgmCoreModule } from '@agm/core';
     AgmCoreModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,3 +62,9 @@ import { AgmCoreModule } from '@agm/core';
   ]
 })
 export class AppModule {}
+
+export class UserProfile{
+fn = "First Name"
+ln = "Last Name"
+image = " "
+}
