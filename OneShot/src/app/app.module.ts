@@ -10,6 +10,7 @@ import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { DetailsPage } from '../pages/details/details';
 import { SignupPage } from '../pages/signup/signup';
+import { ProfilePage } from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,9 @@ import { firebaseConfig } from '../app/config';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AgmCoreModule } from '@agm/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileService } from '../services/profile.service';
+import { UserProfileComponent } from '../components/user-profile/user-profile';
 
 
 
@@ -31,7 +35,9 @@ import { AgmCoreModule } from '@agm/core';
     AboutPage,
     CategoryPage,
     DetailsPage,
-    SignupPage
+    SignupPage,
+    ProfilePage,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import { AgmCoreModule } from '@agm/core';
     AgmCoreModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,12 +58,21 @@ import { AgmCoreModule } from '@agm/core';
     AboutPage,
     CategoryPage,
     DetailsPage,
-    SignupPage
+    SignupPage,
+    ProfilePage,
+    UserProfileComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProfileService,
   ]
 })
 export class AppModule {}
+
+export class UserProfile{
+fn = "First Name"
+ln = "Last Name"
+img = "http://via.placeholder.com/350x150"
+}

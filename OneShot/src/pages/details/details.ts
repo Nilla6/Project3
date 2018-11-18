@@ -13,6 +13,7 @@ bars;
 
   constructor(navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     this.bars = navParams.get('selectedBar');
+    console.log(this.bars);
   }
 
   ionViewDidLoad() {

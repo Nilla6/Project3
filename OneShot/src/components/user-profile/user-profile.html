@@ -1,0 +1,41 @@
+<!-- Generated template for the UserProfileComponent component -->
+<h1>User Profile</h1>
+<div>
+  <form [formGroup]="profileForm" novalidate>
+    <label>First Name</label>
+    <input class="input" type="text"
+      formControlName="fn"
+      (change)="saveProfileChanges()"
+      [ngClass]="{
+                    'secondary': profileForm.get('fn').valid && profileForm.get('fn').dirty,
+                    'danger': !profileForm.get('fn').valid
+                  }">
+    <p class="error danger"[hidden]="profileForm.get('fn').valid">
+      First Name is required
+    </p>
+
+    <label>Last Name</label>
+    <input class="input" type="text"
+      formControlName="ln"
+      (change)="saveProfileChanges()"
+      [ngClass]="{
+                    'secondary': profileForm.get('ln').valid && profileForm.get('ln').dirty,
+                    'danger': !profileForm.get('ln').valid
+                  }">
+    <p class="error danger"[hidden]="profileForm.get('ln').valid">
+      First Name is required
+    </p>
+
+    <label>Profile Picture</label>
+    <input class="input" type="text"
+      formControlName="img"
+      (change)="saveProfileChanges()"
+      [ngClass]="{
+                    'secondary': profileForm.get('img').valid && profileForm.get('img').dirty,
+                    'danger': !profileForm.get('img').valid
+                  }">
+    <p class="error danger"[hidden]="profileForm.get('img').valid">
+      First Name is required
+    </p>
+  </form>
+</div>

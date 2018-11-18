@@ -3,6 +3,7 @@ import { NavController, ToastController, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { UserProfileComponent } from '../../components/user-profile/user-profile';
 
 
 @Component({
@@ -45,6 +46,10 @@ export class HomePage {
       }
     });
       
+  }
+
+  loadProfilePage(){
+    this.navCtrl.push(UserProfileComponent);
   }
 
   Alert() {
