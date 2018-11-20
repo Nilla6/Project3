@@ -9,6 +9,7 @@ import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProfilePage } from '../pages/profile/profile';
 import { User } from '../models/user';
 
 
@@ -32,7 +33,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'About', component: AboutPage },
       { title: 'Categories', component: CategoryPage },
-      { title: 'Login', component: LoginPage }
+      { title: 'Login', component: LoginPage },
     ];
     this.AFauth.auth.onAuthStateChanged(function(user){
       if(user){

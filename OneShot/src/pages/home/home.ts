@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, ToastController, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { UserProfileComponent } from '../../components/user-profile/user-profile';
+import { FirebaseApp } from 'angularfire2';
+import { Profile } from '../../models/profile';
+import { ProfilePage } from '../profile/profile';
 
 
 @Component({
@@ -13,6 +16,7 @@ import { UserProfileComponent } from '../../components/user-profile/user-profile
 export class HomePage {
   
   infos;
+  profileData: AngularFireObject<Profile>
 
   constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
@@ -38,18 +42,23 @@ export class HomePage {
           message: `Welcome to OneShot, ${data.email}`,
           duration: 3000
         }).present();
+      
+        this.profileData = this.db.object(`profile/${data.uid}`)
+      
       } else{
         this.toast.create({
-          message: `Could not find Authentication details`,
+          message: `Welcome Anonymous User`,
           duration: 3000
         }).present();
       }
     });
+
+    
       
   }
 
   loadProfilePage(){
-    this.navCtrl.push(UserProfileComponent);
+    this.navCtrl.push(ProfilePage);
   }
 
   Alert() {

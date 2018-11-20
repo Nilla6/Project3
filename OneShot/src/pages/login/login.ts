@@ -42,6 +42,10 @@ export class LoginPage {
     }
   }
 
+  signOut(){
+    
+  }
+
   signUp(){
     this.navCtrl.push(SignupPage);
   }
