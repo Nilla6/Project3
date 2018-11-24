@@ -14,6 +14,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Camera} from '@ionic-native/camera';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from '../app/config';
@@ -67,6 +68,7 @@ import { UserProfileComponent } from '../components/user-profile/user-profile';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProfileService,
+    Camera
   ]
 })
 export class AppModule {}

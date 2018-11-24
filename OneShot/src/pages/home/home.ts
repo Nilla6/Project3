@@ -7,8 +7,10 @@ import { UserProfileComponent } from '../../components/user-profile/user-profile
 import { FirebaseApp } from 'angularfire2';
 import { Profile } from '../../models/profile';
 import { ProfilePage } from '../profile/profile';
-
-
+import { storage, initializeApp } from 'firebase';
+import { firebaseConfig } from '../../app/config'
+import { Camera } from '@ionic-native/camera';
+import { LoginPage } from '../login/login';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,8 +20,9 @@ export class HomePage {
   infos;
   profileData: AngularFireObject<Profile>
 
-  constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(private cam: Camera, private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
+    
   }
 
   GoToAnotherPage(): void {
@@ -57,6 +60,11 @@ export class HomePage {
       
   }
 
+  signOut(){
+    this.AFauth.auth.signOut();
+    this.navCtrl.setRoot(LoginPage);
+  }
+
   loadProfilePage(){
     this.navCtrl.push(ProfilePage);
   }
@@ -75,5 +83,9 @@ export class HomePage {
       ]
     });
     confirm.present()
+  }
+
+  takePhoto(){
+    //Define Camera Options
   }
 }

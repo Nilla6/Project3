@@ -18,13 +18,19 @@ import { User } from '../models/user';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  rootPage = WelcomePage;
   user = {} as User; 
-
+  rootPage = WelcomePage;
   pages: Array<{title: string, component: any}>;
 
   constructor(private AFauth: AngularFireAuth, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private menu: MenuController) {
+    this.AFauth.auth.onAuthStateChanged(function(user){
+      if(user){
+        this.rootPage = LoginPage;
+      }
+      else{
+        this.rootPage = WelcomePage;
+      }  
+    });
     this.initializeApp();
     this.menu = menu;
 
@@ -35,14 +41,7 @@ export class MyApp {
       { title: 'Categories', component: CategoryPage },
       { title: 'Login', component: LoginPage },
     ];
-    this.AFauth.auth.onAuthStateChanged(function(user){
-      if(user){
-        this.rootPage = HomePage;
-      }
-      else{
-        this.rootPage = WelcomePage;
-      }    
-    });
+      
   }
   
 
@@ -53,12 +52,18 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    
   }
 
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  signOut(){
+    this.AFauth.auth.signOut();
+    this.nav.setRoot(LoginPage);
   }
 
 }
