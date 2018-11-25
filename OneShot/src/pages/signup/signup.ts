@@ -26,6 +26,36 @@ export class SignupPage {
   async signUp(user: User){
     try{
      const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
+     /*.then(res =>{
+      let confirm = this.alertCtrl.create({
+        title: "Account Created",
+        message: 'You have successfully created a new account.',
+        buttons: [
+          {
+            text: 'Great!',
+            handler: () => {
+              console.log('Great clicked');
+              this.navCtrl.setRoot(LoginPage);
+            }
+          }
+        ]
+      });
+      confirm.present()
+    })}, err => {
+      let confirm = this.alertCtrl.create({
+        title: "Wrong Format",
+        message: 'The email/password you entered is incorrectly formatted. The Password must have at least 8 characters and the email should have an "@" symbol',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('Okay clicked');
+            }
+          }
+        ]
+      });
+      confirm.present()
+    })*/
      console.log(result);
      if(result){
       this.navCtrl.setRoot(LoginPage);
