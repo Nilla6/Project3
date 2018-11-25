@@ -11,6 +11,7 @@ import { CategoryPage } from '../pages/category/category';
 import { DetailsPage } from '../pages/details/details';
 import { SignupPage } from '../pages/signup/signup';
 import { ProfilePage } from '../pages/profile/profile';
+import { ResetPage } from '../pages/reset/reset';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,8 @@ import { UserProfileComponent } from '../components/user-profile/user-profile';
     DetailsPage,
     SignupPage,
     ProfilePage,
-    UserProfileComponent
+    UserProfileComponent,
+    ResetPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { UserProfileComponent } from '../components/user-profile/user-profile';
     DetailsPage,
     SignupPage,
     ProfilePage,
-    UserProfileComponent
+    UserProfileComponent,
+    ResetPage
   ],
   providers: [
     StatusBar,

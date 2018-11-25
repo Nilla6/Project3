@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { User } from '../../models/user';
 import {AngularFireAuth} from 'angularfire2/auth'
 import { LoginPage } from '../login/login';
@@ -20,13 +20,13 @@ export class SignupPage {
 
   user = {} as User;
 
-  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   async signUp(user: User){
     try{
-     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
-     /*.then(res =>{
+     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password)
+     .then(res => {
       let confirm = this.alertCtrl.create({
         title: "Account Created",
         message: 'You have successfully created a new account.',
@@ -41,7 +41,7 @@ export class SignupPage {
         ]
       });
       confirm.present()
-    })}, err => {
+    }, err => {
       let confirm = this.alertCtrl.create({
         title: "Wrong Format",
         message: 'The email/password you entered is incorrectly formatted. The Password must have at least 8 characters and the email should have an "@" symbol',
@@ -55,11 +55,12 @@ export class SignupPage {
         ]
       });
       confirm.present()
-    })*/
+    })
+    /*
      console.log(result);
      if(result){
       this.navCtrl.setRoot(LoginPage);
-    }
+    }*/
     }
     catch(e){
       console.error(e);
