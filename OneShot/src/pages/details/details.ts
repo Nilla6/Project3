@@ -19,5 +19,6 @@ bars;
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
   }
+  
 
 }
