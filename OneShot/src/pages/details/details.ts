@@ -16,15 +16,6 @@ bars;
     console.log(this.bars);
   }
 
-  BarInfo(){
-    this.db.list('/Bars/bar/').valueChanges().subscribe(
-      data => {
-        console.log(data)
-        this.bars = data
-      }
-    )
-  }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
   }
