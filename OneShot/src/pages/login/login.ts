@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { SignupPage } from '../signup/signup';
+import { ResetPage } from '../reset/reset';
 
 /**
  * Generated class for the LoginPage page.
@@ -28,7 +29,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  async login(user: User, token){
+  async login(user: User){
     try{
       const result = this.AFauth.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
         .then(res =>{
@@ -119,6 +120,10 @@ export class LoginPage {
       ]
     });
     confirm.present()
+  }
+
+  forgotPasswordPage(){
+    this.navCtrl.push(ResetPage);
   }
 
 }
