@@ -4,6 +4,8 @@ import { Profile } from '../../models/profile';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { HomePage } from '../home/home';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { storage } from 'firebase';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -18,7 +20,7 @@ import { HomePage } from '../home/home';
 })
 export class ProfilePage {
   profile = {} as Profile;
-  constructor(private db: AngularFireDatabase,private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private cam: Camera, private db: AngularFireDatabase,private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -27,9 +29,32 @@ export class ProfilePage {
 
   updateProfile(){
     this.AFauth.authState.take(1).subscribe(auth => {
-      this.db.list(`profile/${auth.uid}`).push(this.profile)
+      this.db.object(`profile/${auth.uid}`).set(this.profile)
         .then(() => this.navCtrl.push(HomePage))
     })
   }
+
+  async takePhoto(){
+    //Define Camera Options
+    try{
+      const options: CameraOptions = {
+        quality: 50,
+        targetHeight: 600,
+        targetWidth: 600,
+        destinationType: this.cam.DestinationType.DATA_URL,
+        encodingType: this.cam.EncodingType.JPEG,
+        mediaType: this.cam.MediaType.PICTURE
+      }
+      
+      const result = await this.cam.getPicture(options);
+      const image = `data:image/jpeg;base64, ${result}`;
+      const pictures = storage().ref('pictures');
+      pictures.putString(image, 'data_url');
+ 
+    } catch(e){
+    console.error(e);
+    } 
+  }
+  
 
 }

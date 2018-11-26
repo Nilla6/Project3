@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailsPage } from '../details/details'
 import { Bars } from '../../models/bars';
 import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the CategoryPage page.
@@ -60,5 +61,8 @@ export class CategoryPage {
     });
   }
 
+  loadProfilePage(){
+    this.navCtrl.push(ProfilePage);
+  }
 
 }

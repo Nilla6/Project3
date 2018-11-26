@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the AboutPage page.
@@ -22,4 +23,8 @@ export class AboutPage {
     console.log('ionViewDidLoad AboutPage');
   }
 
+  loadProfilePage(){
+    this.navCtrl.push(ProfilePage);
+  }
+  
 }

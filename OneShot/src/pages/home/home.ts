@@ -4,13 +4,10 @@ import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { UserProfileComponent } from '../../components/user-profile/user-profile';
-import { FirebaseApp } from 'angularfire2';
 import { Profile } from '../../models/profile';
 import { ProfilePage } from '../profile/profile';
-import { storage, initializeApp } from 'firebase';
-import { firebaseConfig } from '../../app/config'
-import { Camera } from '@ionic-native/camera';
 import { LoginPage } from '../login/login';
+import { userInfo } from 'os';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -20,7 +17,7 @@ export class HomePage {
   infos;
   profileData: AngularFireObject<Profile>
 
-  constructor(private cam: Camera, private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
     
   }
@@ -85,7 +82,4 @@ export class HomePage {
     confirm.present()
   }
 
-  takePhoto(){
-    //Define Camera Options
-  }
 }
