@@ -39,6 +39,7 @@
     "firebase-tools": "^5.1.1",
     "hoek": "^5.0.4",
     "ionic-angular": "3.9.2",
+    "ionic3-star-rating": "^1.1.4",
     "ionicons": "4.4.4",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",
