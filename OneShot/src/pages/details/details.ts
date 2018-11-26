@@ -3,8 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ParentPage } from './parent';
-import { StarRatingModule } from 'ionic3-star-rating';
+//import { ParentPage } from './parent';
+//import { StarRatingModule } from 'ionic3-star-rating';
 
 @IonicPage()
 @Component({
