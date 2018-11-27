@@ -7,7 +7,7 @@ import { UserProfileComponent } from '../../components/user-profile/user-profile
 import { Profile } from '../../models/profile';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
-import { userInfo } from 'os';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -36,14 +36,14 @@ export class HomePage {
   }
 
   ionViewWillLoad(){
-    this.AFauth.authState.subscribe(data => {
+    this.AFauth.authState.take(1).subscribe(data => {
       if(data && data.email && data.uid){
         this.toast.create({
           message: `Welcome to OneShot, ${data.email}`,
           duration: 3000
         }).present();
       
-        this.profileData = this.db.object(`profile/${data.uid}`)
+        this.profileData = this.db.object(`profile/${data.uid}`).valueChanges()
       
       } else{
         this.toast.create({
