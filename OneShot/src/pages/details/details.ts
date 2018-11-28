@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireList} from "@angular/fire/database";
 import { storage } from 'firebase';
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
-//import { ParentPage } from './parent';
-//import { StarRatingModule } from 'ionic3-star-rating';
 
 @IonicPage()
 @Component({

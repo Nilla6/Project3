@@ -33,4 +33,18 @@ page-details {
         color: rgb(237, 32, 36);
     }
 
+    ul {
+        padding: 0px;
+      
+        &.rating li {
+          padding: 5px 10px !important;
+          background: none;
+          color: rgb(237, 32, 36);
+      
+          ion-icon {
+            font-size: 30px;
+          }
+        }
+      }
+
 }
