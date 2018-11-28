@@ -25,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileService } from '../services/profile.service';
 import { UserProfileComponent } from '../components/user-profile/user-profile';
+import { Ionic2RatingModule } from 'ionic2-rating';
 
 
 
@@ -50,7 +51,8 @@ import { UserProfileComponent } from '../components/user-profile/user-profile';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ionic2RatingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { DetailsPage } from './details';
-import { Ionic2RatingModule } from 'ionic2-rating';
 
 @NgModule({
   declarations: [
@@ -9,7 +8,6 @@ import { Ionic2RatingModule } from 'ionic2-rating';
   ],
   imports: [
     IonicPageModule.forChild(DetailsPage),
-    Ionic2RatingModule
   ],
 })
 export class DetailsPageModule {}
