@@ -7,6 +7,7 @@ import { UserProfileComponent } from '../../components/user-profile/user-profile
 import { Profile } from '../../models/profile';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'page-home',
@@ -15,7 +16,8 @@ import { LoginPage } from '../login/login';
 export class HomePage {
   
   infos;
-  profileData: AngularFireObject<Profile>
+  profileDataRef: AngularFireObject<Profile>;
+  profileData: Observable<Profile>;
 
   constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
@@ -43,7 +45,8 @@ export class HomePage {
           duration: 3000
         }).present();
       
-        this.profileData = this.db.object(`profile/${data.uid}`).valueChanges()
+        this.profileDataRef = this.db.object(`profile/${data.uid}`);
+        this.profileData = this.profileDataRef.valueChanges();
       
       } else{
         this.toast.create({
