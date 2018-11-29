@@ -22,7 +22,7 @@ export class CategoryPage {
  barRef$: AngularFireList<Bars[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
-    this.barRef$ = this.db.list('bars-info');
+    //this.barRef$ = this.db.list('bars-info');
     this.BarInfo();
     this.CategoryInfo();
   }
@@ -43,7 +43,7 @@ export class CategoryPage {
         this.bars = data
       }
     )
-    this.db.list('Bars/bar').update(data)
+    //this.db.list('Bars/bar').update(data)
   }
 
   CategoryInfo(){
