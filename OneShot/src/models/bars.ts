@@ -3,6 +3,6 @@ export interface Bars {
     BarName : string;
     Description: string;
     Drink : string;
-    Rating: number;
+    barRating: number;
     WebLink: string;
 }
