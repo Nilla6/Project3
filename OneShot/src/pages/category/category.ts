@@ -43,6 +43,7 @@ export class CategoryPage {
         this.bars = data
       }
     )
+    this.db.list('Bars/bar').update(data)
   }
 
   CategoryInfo(){
