@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireList, AngularFireObject} from "@angular/fire/database";
-import { storage } from 'firebase';
 import { ProfilePage } from '../profile/profile';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Rating } from '../../models/rating';
@@ -14,7 +13,7 @@ import { Observable } from 'rxjs';
   selector: 'page-details',
   templateUrl: 'details.html',
 })
-
+//https://www.youtube.com/watch?v=nUb75jKF03E
 export class DetailsPage {
   bars;
   infos;
@@ -66,13 +65,14 @@ export class DetailsPage {
 
   submitComments() {
     var dateObj = new Date();
-   var year = dateObj.getFullYear().toString()
-   var month = dateObj.getMonth().toString()
-   var day = dateObj.getDate().toString()
-   this.currentDate = year + month + day;
+    var year = dateObj.getFullYear().toString();
+    var month = dateObj.getMonth().toString();
+    var day = dateObj.getDate().toString();
+    var monthOptions = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    this.currentDate = year + '/' + monthOptions[month] + '/' + day;
     this.bars = this.navParams.get('selectedBar');
     this.AFauth.authState.take(1).subscribe(auth => {
-      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Nik"})
+      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Name goes Here"})
         .then(res => {
           let confirm = this.alertCtrl.create({
             title: "Success",
