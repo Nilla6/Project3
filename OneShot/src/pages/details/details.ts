@@ -23,6 +23,7 @@ export class DetailsPage {
   profileDataRef: AngularFireObject<Profile>;
   profileData: Observable<Profile>;
   currentDate;
+  
 
   constructor(private AFauth: AngularFireAuth, public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     this.bars = navParams.get('selectedBar');
@@ -90,51 +91,12 @@ export class DetailsPage {
     this.currentDate = year + '/' + monthOptions[month] + '/' + day;
     this.bars = this.navParams.get('selectedBar');
     this.AFauth.authState.take(1).subscribe(auth => {
-      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Name goes Here"})
-        .then(res => {
-          let confirm = this.alertCtrl.create({
-            title: "Success",
-            message: 'You have successfully created a new post.',
-            buttons: [
-              {
-                text: 'Great!',
-                handler: () => {
-                  console.log('Great clicked');
-                }
-              }
-            ]
-          });
-          confirm.present()
-        }, err => {
-          let confirm = this.alertCtrl.create({
-            title: "Failed",
-            message: 'something went wrong.',
-            buttons: [
-              {
-                text: 'Okay',
-                handler: () => {
-                  console.log('Okay clicked');
-                }
-              }
-            ]
-          });
-          confirm.present()
-        })
+      this.profileDataRef = this.db.object(`profile/${auth.uid}`);
+        this.profileData = this.profileDataRef.valueChanges();
+      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Name goes here"})
+
+      })
+      
     }
-    
-    /*let confirm = this.alertCtrl.create({
-      title: 'Not Done Yet!',
-      message: 'This feature has not yet been completed. Will be completed soon.',
-      buttons: [
-        {
-          text: 'Okay',
-          handler: () => {
-            console.log('Okay clicked');
-          }
-        }
-      ]
-    });
-    confirm.present()*/
-    )}
+  }
   
-}
