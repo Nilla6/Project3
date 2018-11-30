@@ -16,12 +16,14 @@ import { Observable } from 'rxjs';
 })
 
 export class DetailsPage {
-bars;
-infos;
-ratings = {} as Rating;
-posts = {} as Post;
-profileDataRef: AngularFireObject<Profile>;
-profileData: Observable<Profile>;
+  bars;
+  infos;
+  profile;
+  ratings = {} as Rating;
+  posts = {} as Post;
+  profileDataRef: AngularFireObject<Profile>;
+  profileData: Observable<Profile>;
+  currentDate;
 
   constructor(private AFauth: AngularFireAuth, public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
     this.bars = navParams.get('selectedBar');
