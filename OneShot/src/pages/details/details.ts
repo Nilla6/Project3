@@ -51,6 +51,24 @@ export class DetailsPage {
     console.log(event);
     }
 
+  /*ngOnInit() {
+    this.profile = this.db.object(`profile/${auth.uid}`)
+    this.bars = this.db.object('bars.barname')
+    
+    this.bars = this.db.valueChanges()
+    this.profile = this.db.valueChanges()
+  }
+    
+  get Bar() {
+    return this.bars.ref.id
+  }
+    
+  get userId() {
+    return this.profile.ref.id
+  }
+    
+  }*/
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
     this.AFauth.authState.subscribe(data => {
