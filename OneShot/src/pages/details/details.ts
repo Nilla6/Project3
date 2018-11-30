@@ -30,7 +30,13 @@ profileData: Observable<Profile>;
   }
 
   PostInfo(){
-    
+    this.bars = this.navParams.get('selectedBar');
+    this.db.list(`/posts/${this.bars.barname}`).valueChanges().subscribe(
+      data => {
+        console.log('Post Info:', data)
+        this.infos = data
+      }
+    )
   }
 
   onModelChange(event){
@@ -57,9 +63,14 @@ profileData: Observable<Profile>;
   }
 
   submitComments() {
+    var dateObj = new Date();
+   var year = dateObj.getFullYear().toString()
+   var month = dateObj.getMonth().toString()
+   var day = dateObj.getDate().toString()
+   this.currentDate = year + month + day;
     this.bars = this.navParams.get('selectedBar');
     this.AFauth.authState.take(1).subscribe(auth => {
-      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set(this.posts)
+      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Nik"})
         .then(res => {
           let confirm = this.alertCtrl.create({
             title: "Success",
@@ -89,7 +100,7 @@ profileData: Observable<Profile>;
           });
           confirm.present()
         })
-    })
+    }
     
     /*let confirm = this.alertCtrl.create({
       title: 'Not Done Yet!',
@@ -104,6 +115,6 @@ profileData: Observable<Profile>;
       ]
     });
     confirm.present()*/
-  }
+    )}
   
 }
