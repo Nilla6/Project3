@@ -17,7 +17,7 @@ import { Observable } from 'rxjs';
 export class DetailsPage {
   bars;
   infos;
-  profile;
+  profile = {} as Profile;
   ratings = {} as Rating;
   posts = {} as Post;
   profileDataRef: AngularFireObject<Profile>;
@@ -93,7 +93,7 @@ export class DetailsPage {
     this.AFauth.authState.take(1).subscribe(auth => {
       this.profileDataRef = this.db.object(`profile/${auth.uid}`);
         this.profileData = this.profileDataRef.valueChanges();
-      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: "Name goes here"})
+      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: this.profile.fn + ' ' + this.profile.ln})
 
       })
       
