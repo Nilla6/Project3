@@ -92,8 +92,8 @@ export class DetailsPage {
     this.bars = this.navParams.get('selectedBar');
     this.AFauth.authState.take(1).subscribe(auth => {
       this.profileDataRef = this.db.object(`profile/${auth.uid}`);
-        this.profileData = this.profileDataRef.valueChanges();
-      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: this.profile.fn + ' ' + this.profile.ln})
+      this.profileData = this.profileDataRef.valueChanges();
+      this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: auth.displayName, photo: auth.photoURL})
 
       })
       

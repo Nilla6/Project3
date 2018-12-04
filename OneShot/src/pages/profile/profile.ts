@@ -20,7 +20,7 @@ import { storage } from 'firebase';
 })
 export class ProfilePage {
   profile = {} as Profile;
-  constructor(private cam: Camera, private db: AngularFireDatabase,private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private cam: Camera, private db: AngularFireDatabase, private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -43,12 +43,13 @@ export class ProfilePage {
         targetWidth: 600,
         destinationType: this.cam.DestinationType.DATA_URL,
         encodingType: this.cam.EncodingType.JPEG,
-        mediaType: this.cam.MediaType.PICTURE
+        mediaType: this.cam.MediaType.PICTURE,
+        correctOrientation: true
       }
       
       const result = await this.cam.getPicture(options);
       const image = `data:image/jpeg;base64, ${result}`;
-      const pictures = storage().ref('pictures');
+      const pictures = storage().ref('user-pics/');
       pictures.putString(image, 'data_url');
  
     } catch(e){

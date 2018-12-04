@@ -8,19 +8,23 @@ import { Profile } from '../../models/profile';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
 import { Observable } from 'rxjs';
+import { UserProf } from '../../models/user';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
+  userprof = {} as UserProf;
+  user;
   infos;
   profileDataRef: AngularFireObject<Profile>;
   profileData: Observable<Profile>;
 
   constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
+    this.ionViewWillLoad();
     
   }
 
@@ -38,15 +42,18 @@ export class HomePage {
   }
 
   ionViewWillLoad(){
+   
     this.AFauth.authState.take(1).subscribe(data => {
+      this.user = data;
       if(data && data.email && data.uid){
+        console.log('name', data)
         this.toast.create({
-          message: `Welcome to OneShot, ${data.email}`,
+          message: `Welcome to OneShot, ${data.displayName}`,
           duration: 3000
         }).present();
       
-        this.profileDataRef = this.db.object(`profile/${data.uid}`);
-        this.profileData = this.profileDataRef.valueChanges();
+       // this.profileDataRef = this.db.object(`profile/${data.uid}`);
+       // this.profileData = this.profileDataRef.valueChanges();
       
       } else{
         this.toast.create({

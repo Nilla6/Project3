@@ -20,14 +20,20 @@
     <ion-list>
         <ion-item>
           <ion-label floating>Email</ion-label>
-          <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+          <ion-input type="text" [(ngModel)]="userprof.email"></ion-input>
         </ion-item>
           
         <ion-item>
           <ion-label floating>Password</ion-label>
-          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+          <ion-input type="password" [(ngModel)]="userprof.password"></ion-input>
+        </ion-item>
+      
+
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="userprof.displayName"></ion-input>
         </ion-item>
       </ion-list>
   
-      <button ion-button full type="submit" (click)="signUp(user)">Sign Up</button>
+      <button ion-button full type="submit" (click)="signUp(userprof)">Sign Up</button>
 </ion-content>

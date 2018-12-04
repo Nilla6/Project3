@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { User } from '../../models/user';
+import { UserProf } from '../../models/user';
 import {AngularFireAuth} from 'angularfire2/auth'
 import { LoginPage } from '../login/login';
+import * as firebase from 'firebase';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 /**
  * Generated class for the SignupPage page.
@@ -18,15 +20,21 @@ import { LoginPage } from '../login/login';
 })
 export class SignupPage {
 
-  user = {} as User;
+  userprof = {} as UserProf;
 
-  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
-  async signUp(user: User){
+  async signUp(userprof: UserProf){
+    
     try{
-     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password)
-     .then(res => {
+     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.userprof.email, this.userprof.password)
+      .then(res => {
+       // this.updateProfile(userprof)
+      //this.AFauth.authState.take(1).subscribe(auth => {
+      //this.db.object(`user/${auth.uid}`).set(this.userprof)
+      //}); 
+      this.updateProfile(userprof)
       let confirm = this.alertCtrl.create({
         title: "Account Created",
         message: 'You have successfully created a new account.',
@@ -41,6 +49,7 @@ export class SignupPage {
         ]
       });
       confirm.present()
+      console.log('after success alert', userprof)
     }, err => {
       let confirm = this.alertCtrl.create({
         title: "Wrong Format",
@@ -49,7 +58,7 @@ export class SignupPage {
           {
             text: 'Okay',
             handler: () => {
-              console.log('Okay clicked');
+              console.log('Okay clicked');console.log(userprof.displayName);
             }
           }
         ]
@@ -64,7 +73,19 @@ export class SignupPage {
     }
     catch(e){
       console.error(e);
+      console.log('End', userprof)
     }
+  }
+
+  updateProfile(userprof: UserProf){
+    console.log('UpdateProfilestart', userprof);
+    var user = firebase.auth().currentUser;
+      user.updateProfile({
+        displayName: userprof.displayName,
+        photoURL: "https://via.placeholder.com/150"
+        
+      })
+      console.log('UpdateProfileend', userprof);
   }
    
 }

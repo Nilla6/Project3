@@ -16,7 +16,7 @@
 </ion-header>
 
 <ion-content padding class="card-background-page">
-  <h3> Welcome to OneShot {{(profileData | async)?.fn}}</h3>
+  <h3> Welcome to OneShot {{user.displayName}}</h3>
   <ion-card  *ngFor="let info of infos" (click) = "GoToAnotherPage()">
     <img src="{{info.barImage}}"/>
     <div class="card-title">{{info.name}}</div>
