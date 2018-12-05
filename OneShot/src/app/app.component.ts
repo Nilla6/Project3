@@ -9,7 +9,8 @@ import { AboutPage } from '../pages/about/about';
 import { CategoryPage } from '../pages/category/category';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { User } from '../models/user';
+import { UserProf } from '../models/user';
+import * as firebase from 'firebase'
 
 
 @Component({
@@ -17,7 +18,7 @@ import { User } from '../models/user';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  user = {} as User; 
+  userprof = {} as UserProf; 
   rootPage = WelcomePage;
   pages: Array<{title: string, component: any}>;
 
@@ -31,6 +32,19 @@ export class MyApp {
       }  
     });
     this.initializeApp();
+    firebase.auth().onAuthStateChanged(function(userprof) {
+      if (userprof) {
+        // User is signed in.
+        this.rootPage = HomePage;
+        var displayName = userprof.displayName;
+        var email = userprof.email;
+        var isAnonymous = userprof.isAnonymous;
+        var uid = userprof.uid;
+      } else {
+        // User is signed out.
+        this.rootPage = WelcomePage;
+      }
+    });
     this.menu = menu;
 
     // used for an example of ngFor and navigation

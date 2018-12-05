@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { User } from '../../models/user';
+import { UserProf } from '../../models/user';
 import {AngularFireAuth} from 'angularfire2/auth'
 import { LoginPage } from '../login/login';
+import * as firebase from 'firebase';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 /**
  * Generated class for the SignupPage page.
@@ -18,28 +20,30 @@ import { LoginPage } from '../login/login';
 })
 export class SignupPage {
 
-  user = {} as User;
+  userprof = {} as UserProf;
 
-  constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
-  async signUp(user: User){
+  async signUp(userprof: UserProf){
+    
     try{
-     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password)
-     .then(res => {
-      let confirm = this.alertCtrl.create({
-        title: "Account Created",
-        message: 'You have successfully created a new account.',
-        buttons: [
+     const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.userprof.email, this.userprof.password)
+      .then(res => {
+        this.updateProfile(userprof)
+        let confirm = this.alertCtrl.create({
+          title: "Account Created",
+          message: 'You have successfully created a new account.',
+          buttons: [
           {
             text: 'Great!',
             handler: () => {
               console.log('Great clicked');
               this.navCtrl.setRoot(LoginPage);
-            }
+              }
           }
-        ]
-      });
+          ]
+        });
       confirm.present()
     }, err => {
       let confirm = this.alertCtrl.create({
@@ -65,6 +69,15 @@ export class SignupPage {
     catch(e){
       console.error(e);
     }
+  }
+
+  updateProfile(userprof: UserProf){
+    console.log('UpdateProfilestart', userprof);
+    var user = firebase.auth().currentUser;
+      user.updateProfile({
+        displayName: userprof.displayName,
+        photoURL: ""
+      })
   }
    
 }

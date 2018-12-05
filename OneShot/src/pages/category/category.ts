@@ -62,8 +62,4 @@ export class CategoryPage {
     });
   }
 
-  loadProfilePage(){
-    this.navCtrl.push(ProfilePage);
-  }
-
 }

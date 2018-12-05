@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { User } from '../../models/user';
+import { UserProf } from '../../models/user';
 import { LoginPage } from '../login/login';
 
 /**
@@ -18,7 +18,7 @@ import { LoginPage } from '../login/login';
 })
 export class ResetPage {
 
-  user = {} as User;
+  userprof = {} as UserProf;
 
   constructor(private AFauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
@@ -27,9 +27,9 @@ export class ResetPage {
     console.log('ionViewDidLoad ResetPage');
   }
 
-  async resetPassword(user: User){
+  async resetPassword(userprof: UserProf){
     try{
-      const result = await this.AFauth.auth.sendPasswordResetEmail(this.user.email)
+      const result = await this.AFauth.auth.sendPasswordResetEmail(this.userprof.email)
         .then(res => {
           let confirm = this.alertCtrl.create({
             title: "Reset Password Email Sent",
