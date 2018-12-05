@@ -5,7 +5,6 @@ import { ProfilePage } from '../profile/profile';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Rating } from '../../models/rating';
 import { Post } from '../../models/post';
-import { Profile } from '../../models/profile';
 import { Observable } from 'rxjs';
 
 @IonicPage()
@@ -13,15 +12,12 @@ import { Observable } from 'rxjs';
   selector: 'page-details',
   templateUrl: 'details.html',
 })
-//https://www.youtube.com/watch?v=nUb75jKF03E
+
 export class DetailsPage {
   bars;
   infos;
-  profile = {} as Profile;
   ratings = {} as Rating;
   posts = {} as Post;
-  profileDataRef: AngularFireObject<Profile>;
-  profileData: Observable<Profile>;
   currentDate;
   
 
@@ -72,14 +68,6 @@ export class DetailsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailsPage');
-    this.AFauth.authState.subscribe(data => {
-      this.profileDataRef = this.db.object(`profile/${data.uid}`);
-      this.profileData = this.profileDataRef.valueChanges();
-    })
-  }
-
-  loadProfilePage(){
-    this.navCtrl.push(ProfilePage);
   }
 
   submitComments() {
@@ -91,10 +79,7 @@ export class DetailsPage {
     this.currentDate = year + '/' + monthOptions[month] + '/' + day;
     this.bars = this.navParams.get('selectedBar');
     this.AFauth.authState.take(1).subscribe(auth => {
-      this.profileDataRef = this.db.object(`profile/${auth.uid}`);
-      this.profileData = this.profileDataRef.valueChanges();
       this.db.object(`posts/${this.bars.barname}/${auth.uid}`).set({post: this.posts.message, date: this.currentDate, name: auth.displayName, photo: auth.photoURL})
-
       })
       
     }

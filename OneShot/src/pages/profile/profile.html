@@ -15,20 +15,10 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-label floating> Username </ion-label>
-    <ion-input [(ngModel)]="profile.un"></ion-input>
+    <img src={{user.photoUrl}}>
+    <h2>{{user.displayName}}</h2>
   </ion-item>
   
-  <ion-item>
-    <ion-label floating> First Name </ion-label>
-    <ion-input [(ngModel)]="profile.fn"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating> Last Name </ion-label>
-    <ion-input [(ngModel)]="profile.ln"></ion-input>
-  </ion-item>
-
   <button ion-button (click)="takePhoto()">Take Photo</button>
-  <button ion-button clear (click)="updateProfile()">Update Profile</button>
+  <button ion-button clear (click)="changePassword()">Change Password</button>
 </ion-content>

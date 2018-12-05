@@ -2,14 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, ToastController, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
-import { UserProfileComponent } from '../../components/user-profile/user-profile';
-import { Profile } from '../../models/profile';
-import { ProfilePage } from '../profile/profile';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { LoginPage } from '../login/login';
-import { Observable } from 'rxjs';
 import { UserProf } from '../../models/user';
-import * as firebase from 'firebase';
 
 @Component({
   selector: 'page-home',
@@ -19,8 +14,6 @@ export class HomePage {
   userprof = {} as UserProf;
   user;
   infos;
-  profileDataRef: AngularFireObject<Profile>;
-  profileData: Observable<Profile>;
 
   constructor(private db: AngularFireDatabase, private AFauth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.DatabaseInfo();
@@ -52,9 +45,6 @@ export class HomePage {
           duration: 3000
         }).present();
       
-       // this.profileDataRef = this.db.object(`profile/${data.uid}`);
-       // this.profileData = this.profileDataRef.valueChanges();
-      
       } else{
         this.toast.create({
           message: `Welcome Anonymous User`,
@@ -70,10 +60,6 @@ export class HomePage {
   signOut(){
     this.AFauth.auth.signOut();
     this.navCtrl.setRoot(LoginPage);
-  }
-
-  loadProfilePage(){
-    this.navCtrl.push(ProfilePage);
   }
 
   Alert() {

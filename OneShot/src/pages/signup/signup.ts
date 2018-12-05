@@ -30,26 +30,21 @@ export class SignupPage {
     try{
      const result = await this.AFauth.auth.createUserWithEmailAndPassword(this.userprof.email, this.userprof.password)
       .then(res => {
-       // this.updateProfile(userprof)
-      //this.AFauth.authState.take(1).subscribe(auth => {
-      //this.db.object(`user/${auth.uid}`).set(this.userprof)
-      //}); 
-      this.updateProfile(userprof)
-      let confirm = this.alertCtrl.create({
-        title: "Account Created",
-        message: 'You have successfully created a new account.',
-        buttons: [
+        this.updateProfile(userprof)
+        let confirm = this.alertCtrl.create({
+          title: "Account Created",
+          message: 'You have successfully created a new account.',
+          buttons: [
           {
             text: 'Great!',
             handler: () => {
               console.log('Great clicked');
               this.navCtrl.setRoot(LoginPage);
-            }
+              }
           }
-        ]
-      });
+          ]
+        });
       confirm.present()
-      console.log('after success alert', userprof)
     }, err => {
       let confirm = this.alertCtrl.create({
         title: "Wrong Format",
@@ -58,7 +53,7 @@ export class SignupPage {
           {
             text: 'Okay',
             handler: () => {
-              console.log('Okay clicked');console.log(userprof.displayName);
+              console.log('Okay clicked');
             }
           }
         ]
@@ -73,7 +68,6 @@ export class SignupPage {
     }
     catch(e){
       console.error(e);
-      console.log('End', userprof)
     }
   }
 
@@ -82,10 +76,8 @@ export class SignupPage {
     var user = firebase.auth().currentUser;
       user.updateProfile({
         displayName: userprof.displayName,
-        photoURL: "https://via.placeholder.com/150"
-        
+        photoURL: ""
       })
-      console.log('UpdateProfileend', userprof);
   }
    
 }

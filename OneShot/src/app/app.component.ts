@@ -38,7 +38,6 @@ export class MyApp {
         this.rootPage = HomePage;
         var displayName = userprof.displayName;
         var email = userprof.email;
-        var photoURL = userprof.photoURL;
         var isAnonymous = userprof.isAnonymous;
         var uid = userprof.uid;
       } else {
